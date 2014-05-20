@@ -5,16 +5,17 @@
  *      Author: arthurhortmannerpen
  */
 
-#include "makeSupermarket.h"
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include "GoodProcessment.h"
-#include "MediumProcessment.h"
-#include "BadProcessment.h"
-#include "Cashier.h"
 #include <fstream>
+
+#include "makeSupermarket.h"
+#include "cashier/GoodProcessment.h"
+#include "cashier/MediumProcessment.h"
+#include "cashier/BadProcessment.h"
+#include "cashier/Cashier.h"
 
 using namespace std;
 
@@ -100,7 +101,7 @@ Supermarket makeSupermarketConsole() {
 }
 
 Supermarket makeSupermarketFile() {
-	string nomeSupermercado;
+	string SupermarketName;
 	vector<Cashier> cashiers;
 	int tempoMedioNovosClientes;
 	int tempoSimulacao;
@@ -110,47 +111,47 @@ Supermarket makeSupermarketFile() {
 	stringstream numStream;
 	file.open("config.txt");
 	if (file.is_open()) {
-	pegaLinhaPulando(file, nomeSupermercado); // pega o nome
-	cout << "leui o nome" << endl;
-	pegaLinhaPulando(file, input); // pega o tempo de simulacao
-	numStream << input;
-	numStream >> tempoSimulacao;
-	pegaLinhaPulando(file, input); //pega o tempo medio de novos clientes
-	numStream << input;
-	numStream >> tempoMedioNovosClientes;
-	int numCaixas;
-	pegaLinhaPulando(file, input); // pega o numero de caixas
-	numStream << input;
-	numStream >> numCaixas;
-	string nomeCaixa;
-	int eficiencia;
-	double salario;
-	for (int i = 0; i < numCaixas; ++i) {
-		pegaLinhaPulando(file, nomeCaixa, ' '); //pega nome do caixa
-		pegaLinhaPulando(file, input, ' '); // pega eficiencia do caixa
+		pegaLinhaPulando(file, SupermarketName); // pega o nome
+		cout << "leu o nome" << endl;
+		pegaLinhaPulando(file, input); // pega o tempo de simulacao
 		numStream << input;
-		numStream >> eficiencia;
-		pegaLinhaPulando(file, input, ' '); //pega salario
+		numStream >> tempoSimulacao;
+		pegaLinhaPulando(file, input); //pega o tempo medio de novos clientes
 		numStream << input;
-		numStream >> salario;
-		switch (eficiencia) {
-		case 1:
-			cashiers.push_back(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
-			break;
-		case 2:
-			cashiers.push_back(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
-			break;
-		case 3:
-			cashiers.push_back(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
-			break;
+		numStream >> tempoMedioNovosClientes;
+		int numCaixas;
+		pegaLinhaPulando(file, input); // pega o numero de caixas
+		numStream << input;
+		numStream >> numCaixas;
+		string nomeCaixa;
+		int eficiencia;
+		double salario;
+		for (int i = 0; i < numCaixas; ++i) {
+			pegaLinhaPulando(file, nomeCaixa, ' '); //pega nome do caixa
+			pegaLinhaPulando(file, input, ' '); // pega eficiencia do caixa
+			numStream << input;
+			numStream >> eficiencia;
+			pegaLinhaPulando(file, input, ' '); //pega salario
+			numStream << input;
+			numStream >> salario;
+			switch (eficiencia) {
+			case 1:
+				cashiers.push_back(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
+				break;
+			case 2:
+				cashiers.push_back(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
+				break;
+			case 3:
+				cashiers.push_back(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
+				break;
+			}
 		}
-	}
-	file.close();
-	return Supermarket(nomeSupermercado, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
+		file.close();
+		return Supermarket(SupermarketName, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
 	}
 	else {
 		cout << "nao abre" << endl;
-		return Supermarket(nomeSupermercado, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
+		return Supermarket(SupermarketName, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
 	}
 	}
 

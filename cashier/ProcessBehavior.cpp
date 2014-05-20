@@ -6,8 +6,8 @@
  */
 
 #include "ProcessBehavior.h"
-#include "PaymentType.h"
-#include "Client.h"
+#include "../client/PaymentType.h"
+#include "../client/Client.h"
 
 int ProcessBehavior::processTime(const Client &client) {
 	int time = 0;

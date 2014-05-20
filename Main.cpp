@@ -5,23 +5,24 @@
  *      Author: arthurhortmannerpen
  */
 
-
-#include "Supermarket.h"
-#include "Cashier.h"
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
-#include "GoodProcessment.h"
-#include "MediumProcessment.h"
-#include "BadProcessment.h" //                ARRUMAR EXCEPTION GAMBIARRA NA PROCURA DA FILA
+#include <stdlib.h>
+
+#include "Supermarket.h"
+#include "cashier/Cashier.h"
+#include "cashier/GoodProcessment.h"
+#include "cashier/MediumProcessment.h"
+#include "cashier/BadProcessment.h" //                ARRUMAR EXCEPTION GAMBIARRA NA PROCURA DA FILA
 #include "makeSupermarket.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
 	srand(time(NULL));
-	Supermarket s = makeSupermarketFile();
+	Supermarket s = makeSupermarketConsole();
 	s.run();
 	cout << "Supermercado " << s.name() << endl;
 	cout << "Faturamento total do supermercado: " << s.totalIncome() << endl;

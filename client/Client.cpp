@@ -5,23 +5,24 @@
  *      Author: arthurhortmannerpen
  */
 
-#include "Cashier.h"
-#include "Client.h"
-#include "PaymentType.h"
-#include "SearchBehavior.h"
 #include <vector>
 #include <iostream>
 
+#include "../cashier/Cashier.h"
+#include "Client.h"
+#include "PaymentType.h"
+#include "SearchBehavior.h"
+
+
 Client::Client(const SearchBehavior &searchBehavior, PaymentType paymentType,
 		int timeOfArrival, int cartSize, double cartValue):
-		_searchBehavior(searchBehavior.copy()),
+		_searchBehavior(searchBehavior.copy()), //polimorfismo
 		_paymentType(paymentType),
 		_cartSize(cartSize),
 		_cartValue(cartValue),
 		_timeOfArrival(timeOfArrival),
 		_timeOfDeparture()
 {}
-
 
 
 Client::Client(const Client& other) :
@@ -80,5 +81,3 @@ void Client::chooseCashier(std::vector<Cashier> &cashiers) {
 	Cashier &c = _searchBehavior->search(cashiers);
 	c.addClient(*this);
 }
-
-

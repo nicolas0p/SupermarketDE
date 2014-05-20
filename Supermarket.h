@@ -9,7 +9,7 @@
 #define SUPERMARKET_H_
 
 #include <vector>
-#include "Cashier.h"
+#include "cashier/Cashier.h"
 #include <string>
 
 //implementar rule of three

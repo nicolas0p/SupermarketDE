@@ -5,16 +5,19 @@
  *      Author: arthurhortmannerpen
  */
 
-#include "Supermarket.h"
+
 #include <vector>
-#include "Cashier.h"
-#include "makeRandomClient.h"
-#include "stdlib.h"
-#include "time.h"
-#include <string>
-#include "GoodProcessment.h"
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <stdlib.h>
+#include <time.h>
+
+#include "cashier/Cashier.h"
+#include "client/makeRandomClient.h"
+#include "Supermarket.h"
+#include "cashier/GoodProcessment.h"
+
 
 Supermarket::Supermarket(const std::string& name, const std::vector<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
 		_name(name),

@@ -8,7 +8,7 @@
 #ifndef SEARCHBEHAVIOR_H_
 #define SEARCHBEHAVIOR_H_
 
-#include "Cashier.h"
+#include "../cashier/Cashier.h"
 #include <vector>
 
 class SearchBehavior {

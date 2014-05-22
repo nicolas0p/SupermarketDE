@@ -9,13 +9,14 @@
 #define SUPERMARKET_H_
 
 #include <vector>
-#include "cashier/Cashier.h"
 #include <string>
 
-//implementar rule of three
+#include "cashier/Cashier.h"
+#include "dataStructures/CircularList.h"
+
 class Supermarket {
 public:
-	Supermarket(const std::string&, const std::vector<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
+	Supermarket(const std::string&, const CircularList<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
 	virtual ~Supermarket();
 	void run();
 	std::string incomeOfCashiers() const;
@@ -32,7 +33,7 @@ private:
 	void updateCashiers();
 	void callNewCashier();
 	std::string _name;
-	std::vector<Cashier> _cashiers;
+	CircularList<Cashier> _cashiers;
 	int _currentTime;
 	int _timeNextClient;
 	int _averageTimeNewClients; // tempo medio de chegada de clientes
@@ -43,15 +44,3 @@ private:
 };
 
 #endif /* SUPERMARKET_H_ */
-
-
-// TODO:
-//ENTRADA DE DADOS: arquivo de configuracao
-
-//lucro por caixa: desconta-se o salario do caixa no periodo compreedido de simulacao. Como guardar esse tempo?
-
-//numero de clientes que desistiram por filas longas
-// cliente abandonar carrinho quando todas as filas tiverem tamanho > 10
-//faturamento que deixou de ser realizado pela desistencia desses clientes
-
-// chamar mais caixa para trabalhar se o tamanho

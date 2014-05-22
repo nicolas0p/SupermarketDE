@@ -5,13 +5,13 @@
  *      Author: arthurhortmannerpen
  */
 
+#include <stdlib.h>
+#include <time.h>
+
 #include "makeRandomClient.h"
 #include "Client.h"
 #include "SearchSmallQueue.h"
 #include "SearchLessItems.h"
-#include "PaymentType.h"
-#include "stdlib.h"
-#include "time.h"
 #include "PaymentType.h"
 #include "SearchBehavior.h"
 
@@ -31,5 +31,3 @@ Client makeRandomClient(int timeOfArrival) {
 	}
 	return Client(SearchLessItems(), payType, timeOfArrival, cartSize, cartValue);
 }
-
-

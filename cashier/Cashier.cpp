@@ -5,45 +5,41 @@
  *      Author: arthurhortmannerpen
  */
 
-#include "Cashier.h"
-#include "../client/Client.h"
-#include "ProcessBehavior.h"
 #include <deque>
 #include <string>
 #include <iostream>
 
-//class ProcessBehavior;
+#include "Cashier.h"
+#include "../client/Client.h"
+#include "ProcessBehavior.h"
 
-Cashier::Cashier(std::string id, double salary, const ProcessBehavior &processBehavior, int timeOfArrival, bool overTime):
-        _id(id),
-        _salary(salary),
-        _queue(std::deque<Client>()),
-        _totalWaitingTime(),
-        _clientsServed(),
-        _totalIncome(),
-        _numOfItems(),
-        _processBehavior(processBehavior.copy()),
-        _timeOfArrival(timeOfArrival),
-		_overTime(overTime)
-		{}
-
+Cashier::Cashier(std::string id, double salary,
+		const ProcessBehavior &processBehavior, int timeOfArrival,
+		bool overTime) :
+		_id(id), _salary(salary), _queue(std::deque<Client>()), _totalWaitingTime(), _clientsServed(), _totalIncome(), _numOfItems(), _processBehavior(
+				processBehavior.copy()), _timeOfArrival(timeOfArrival), _overTime(
+				overTime) {
+}
+/**
+ * @brief Construtor de cópia. Cria um caixa baseado em um outro
+ * @param Outro caixa, o qual sera copiado
+ */
 Cashier::Cashier(const Cashier& other) :
-        _id(other._id),
-        _salary(other._salary),
-        _queue(std::deque<Client>(other._queue)),
-        _totalWaitingTime(other._totalWaitingTime),
-        _clientsServed(other._clientsServed),
-        _totalIncome(other._totalIncome),
-        _numOfItems(other._numOfItems),
-        _processBehavior(other._processBehavior->copy()),
-		_timeOfArrival(other._timeOfArrival),
-		_overTime(other._overTime)
-        {}
+		_id(other._id), _salary(other._salary), _queue(
+				std::deque<Client>(other._queue)), _totalWaitingTime(
+				other._totalWaitingTime), _clientsServed(other._clientsServed), _totalIncome(
+				other._totalIncome), _numOfItems(other._numOfItems), _processBehavior(
+				other._processBehavior->copy()), _timeOfArrival(
+				other._timeOfArrival), _overTime(other._overTime) {
+}
+
+Cashier::Cashier() {
+}
 
 Cashier& Cashier::operator=(Cashier other) {
 	swap(*this, other);
 	return *this;
-	}
+}
 
 void swap(Cashier& first, Cashier& second) {
 	using std::swap;
@@ -63,12 +59,15 @@ Cashier::~Cashier() {
 	delete _processBehavior;
 }
 
+/**
+ * @brief Adiciona um cliente a fila de clientes
+ * @param Cliente a ser adicionado
+ */
 void Cashier::addClient(Client &client) {
 	int timeOfDeparture = _processBehavior->processTime(client);
 	if (_queue.empty()) {
 		timeOfDeparture += client.timeOfArrival();
-	}
-	else {
+	} else {
 		timeOfDeparture += _queue.back().timeOfDeparture();
 	}
 	client.timeOfDeparture(timeOfDeparture);
@@ -76,6 +75,14 @@ void Cashier::addClient(Client &client) {
 	_queue.push_back(client);
 }
 
+/**
+ * @brief Retira clientes que devem sair da fila no horário especificado
+ *
+ * @details Checa se o horário atual é o horário de saída do cliente mais antigo, se sim, o retiro da fila.
+ * Somando os valores da compras do cliente e tempo de espera na fila nos acumuladores, para posterior análise.
+ *
+ * @param Tempo atual do sistema
+ */
 void Cashier::update(int currentTime) {
 	if (_queue.empty())
 		return;
@@ -94,7 +101,7 @@ double Cashier::totalIncome() const {
 }
 
 double Cashier::averageIncome() const {
-	return _totalIncome/_clientsServed;
+	return _totalIncome / _clientsServed;
 }
 
 int Cashier::totalWaitingTime() const {

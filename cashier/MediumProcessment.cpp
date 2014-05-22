@@ -8,7 +8,6 @@
 #include "MediumProcessment.h"
 #include "ProcessBehavior.h"
 
-
 ProcessBehavior* MediumProcessment::copy() const {
 	return new MediumProcessment();
 }

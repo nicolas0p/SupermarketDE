@@ -5,8 +5,6 @@
  *      Author: arthurhortmannerpen
  */
 
-
-#include <vector>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -17,9 +15,10 @@
 #include "client/makeRandomClient.h"
 #include "Supermarket.h"
 #include "cashier/GoodProcessment.h"
+#include "dataStructures/CircularList.h"
 
 
-Supermarket::Supermarket(const std::string& name, const std::vector<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
+Supermarket::Supermarket(const std::string& name, const CircularList<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
 		_name(name),
 		_cashiers(cashiers),
 		_currentTime(),
@@ -31,9 +30,11 @@ Supermarket::Supermarket(const std::string& name, const std::vector<Cashier>& ca
 		_maxQueueSize(maxQueueSize)
 		{}
 
-Supermarket::~Supermarket() {
-}
+Supermarket::~Supermarket() {}
 
+/**
+ * @brief loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao
+ */
 void Supermarket::run() {
 	while (_currentTime < _totalRuntime) {
 		lookForNextClient();
@@ -42,6 +43,12 @@ void Supermarket::run() {
 	}
 }
 
+/**
+ * @brief Pesquisa se um novo cliente entrara no supermercado no tempo atual.
+ *
+ * @details Alem de criar um novo cliente, se esta no momento certo, o metodo tambem prepara o proximo tempo de um cliente
+ * entrar no supermercado
+ */
 void Supermarket::lookForNextClient() {
 	if (_currentTime == _timeNextClient) {
 		Client newClient = makeRandomClient(_currentTime);
@@ -62,11 +69,16 @@ void Supermarket::lookForNextClient() {
 	}
 }
 
-void Supermarket::updateCashiers() { //eh possivel melhorar isso. tambem deve-se pensar no choosebehavior
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
+/**
+ * @brief Atualiza todos os caixas com o tempo atual. Adicionando tambem um caixa extra, caso todas as filas estejam "cheias"
+ *
+ * @details Adiciona um caixa extra caso todas as filas estejam com mais clientes que o maximo setado para as filas
+ */
+void Supermarket::updateCashiers() {
+	for (int i = 0; i < _cashiers.size(); ++i) {
 		_cashiers.at(i).update(_currentTime);
 	}
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
+	for (int i = 0; i < _cashiers.size(); ++i) {
 		if (_cashiers.at(i).queueSize() <= _maxQueueSize) {
 			return;
 		}
@@ -74,21 +86,38 @@ void Supermarket::updateCashiers() { //eh possivel melhorar isso. tambem deve-se
 	callNewCashier();
 }
 
+/**
+ * @brief Cria um caixa extra
+ *
+ * @details Cria um caixa extra com salario 200, processamento bom e trabalhando hora extra
+ */
 void Supermarket::callNewCashier() {
 	_cashiers.push_back(Cashier("Extra Cashier", 200, GoodProcessment(), _currentTime, true));
 }
 
+/**
+ * @brief Cria texto que representa o total de dinheiro que aquele caixa recebeu de seus clientes
+ *
+ * @return String com nome do caixa + o total de dinheiro recebido pelo caixa
+ */
 std::string Supermarket::incomeOfCashiers() const {
 	std::stringstream string;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		string << _cashiers.at(i).id() << "\t\t\t" << _cashiers.at(i).totalIncome() << std::endl;
+	for (int i = 0; i < _cashiers.size(); ++i) {
+		string << _cashiers.at(i).id() << "\t\t\tR$ " << _cashiers.at(i).totalIncome() << std::endl;
 	}
 	return string.str();
 }
 
+/**
+ * @brief Cria texto que representa o lucro do caixa no mes
+ *
+ * @details lucro do caixa = salarioDoCaixa * tempoDeTrabalho / mes
+ *
+ * @return String com nome do caixa + lucro do caixa
+ */
 std::string Supermarket::profitOfCashiers() const {
 	std::stringstream string;
-	for (std::vector<Cashier>::const_iterator cashier = _cashiers.begin(); cashier != _cashiers.end(); ++cashier) {
+	for (CircularList<Cashier>::const_iterator cashier = _cashiers.begin(); cashier != _cashiers.end(); ++cashier) {
 		double cashierCost = cashier->salary() * (_totalRuntime - cashier->timeOfArrival()) / 756000;
 		if (cashier->overTime()) {
 			cashierCost *= 2;
@@ -98,22 +127,36 @@ std::string Supermarket::profitOfCashiers() const {
 	return string.str();
 }
 
+/**
+ * @brief Calcula o total do dinheiro recebido por todos os caixas
+ *
+ * @return A soma do dinheiro recebido por todos os caixas
+ */
 double Supermarket::totalIncome() const {
 	double totalIncome = 0;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
+	for (int i = 0; i < _cashiers.size(); ++i) {
 		totalIncome += _cashiers.at(i).totalIncome();
 	}
 	return totalIncome;
 }
 
+/**
+ * @brief Calcula a media do dinheiro recebido por cada caixa
+ * @details Divide o dinheiro recebido total pelo numero de caixas
+ * @return A media recebida de dinheiro por caixa
+ */
 double Supermarket::averageIncomePerCashier() const {
 	return totalIncome() / _cashiers.size();
 }
 
+/**
+ * @brief Calcula o tempo medio de espera por cliente
+ * @return A media do tempo de espera por cliente
+ */
 double Supermarket::averageWaitingTime() const {
 	double totalWaitingTime = 0;
 	int totalClientsServed = 0;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
+	for (int i = 0; i < _cashiers.size(); ++i) {
 		totalWaitingTime += _cashiers.at(i).totalWaitingTime();
 		totalClientsServed += _cashiers.at(i).clientsServed();
 	}

@@ -9,12 +9,12 @@
 #define SEARCHLESSITEMS_H_
 
 #include "SearchBehavior.h"
-#include <vector>
+#include "../dataStructures/CircularList.h"
 
 class SearchLessItems: public SearchBehavior {
 public:
 	SearchBehavior *copy() const;
-	Cashier &search(std::vector<Cashier> &cashiers) const;
+	Cashier &search(CircularList<Cashier> &cashiers) const;
 };
 
 #endif /* SEARCHLESSITEMS_H_ */

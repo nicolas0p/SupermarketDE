@@ -16,7 +16,7 @@
 
 Client::Client(const SearchBehavior &searchBehavior, PaymentType paymentType,
 		int timeOfArrival, int cartSize, double cartValue):
-		_searchBehavior(searchBehavior.copy()), //polimorfismo
+		_searchBehavior(searchBehavior.copy()),
 		_paymentType(paymentType),
 		_cartSize(cartSize),
 		_cartValue(cartValue),
@@ -77,7 +77,11 @@ double Client::cartValue() const {
 	return _cartValue;
 }
 
-void Client::chooseCashier(std::vector<Cashier> &cashiers) {
+/**
+ * @brief Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente
+ * @param Vetor de caixas de onde sera escolhido um
+ */
+void Client::chooseCashier(CircularList<Cashier> &cashiers) {
 	Cashier &c = _searchBehavior->search(cashiers);
 	c.addClient(*this);
 }

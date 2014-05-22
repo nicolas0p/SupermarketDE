@@ -9,12 +9,12 @@
 #define SEARCHSMALLQUEUE_H_
 
 #include "SearchBehavior.h"
-#include <vector>
+#include "../dataStructures/CircularList.h"
 
 class SearchSmallQueue : public SearchBehavior {
 public:
 	SearchBehavior* copy() const;
-	Cashier& search(std::vector<Cashier> &cashiers) const;
+	Cashier& search(CircularList<Cashier> &cashiers) const;
 };
 
 #endif /* SEARCHSMALLQUEUE_H_ */

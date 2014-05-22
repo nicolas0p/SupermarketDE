@@ -11,8 +11,8 @@
 #include <string>
 #include <deque>
 
-class Client;
-class ProcessBehavior;
+#include "../client/Client.h"
+#include "ProcessBehavior.h"
 
 class Cashier {
 public:
@@ -34,6 +34,8 @@ public:
 	double salary() const;
 	int timeOfArrival() const;
 	bool overTime() const;
+
+	Cashier();
 
 private:
 	std::string _id;

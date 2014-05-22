@@ -2,9 +2,12 @@
 # Dados do Super NaoCompre 
 # Programado por Hack++ 
 # Arquivo: naocompre.dat 
+# tempo simulação
+# tempo medio de novos clientes
+# numero de caixas
 #============================= 
 NaoCompre Costeira 
-5
+5 
 7 
 4 
 Maria_Benta 1 800 

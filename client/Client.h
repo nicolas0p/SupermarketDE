@@ -9,7 +9,7 @@
 #define CLIENT_H_
 
 #include "PaymentType.h"
-#include <vector>
+#include "../dataStructures/CircularList.h"
 
 class SearchBehavior;
 class Cashier;
@@ -28,7 +28,9 @@ public:
 	int timeOfDeparture() const;
 	int timeOfArrival() const;
 	void timeOfDeparture(int timeOfDeparture);
-	void chooseCashier(std::vector<Cashier> &cashiers);
+	void chooseCashier(CircularList<Cashier> &cashiers);
+
+	Client();
 
 private:
 	SearchBehavior *_searchBehavior;

@@ -5,16 +5,17 @@
  *      Author: arthurhortmannerpen
  */
 
+#include "../dataStructures/CircularList.h"
+
 #include "SearchLessItems.h"
-#include <vector>
 #include "SearchBehavior.h"
 
 SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
 }
 
-Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
-	std::vector<Cashier>::iterator best = cashiers.begin();
+Cashier &SearchLessItems::search(CircularList<Cashier> &cashiers) const {
+	CircularList<Cashier>::iterator best = cashiers.begin();
 	if (cashiers.size() == 1) {
 		if (best->queueSize() > 9) {
 			throw 0;
@@ -22,7 +23,8 @@ Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
 		return *best;
 	}
 	bool leave = true;
-	for (std::vector<Cashier>::iterator it = best + 1; it != cashiers.end(); ++it) {
+	CircularList<Cashier>::iterator it = best;
+	for (++it; it != cashiers.end(); ++it) {
 		if (it->queueSize() < 10) {
 			leave = false;
 		}

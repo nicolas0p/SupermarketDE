@@ -167,6 +167,5 @@ void pegaLinhaPulando(ifstream &file, string &input, char c) {
 	do {
 		getline(file, input, c);
 	}
-	while (input.at(0) == '#' || input.length() == 0);
+	while (input.length() == 0 || input.at(0) == '#');
 }
-

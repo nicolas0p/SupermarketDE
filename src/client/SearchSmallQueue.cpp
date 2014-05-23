@@ -6,7 +6,7 @@
  */
 
 #include "../dataStructures/CircularList.h"
-
+#include "../cashier/Cashier.h"
 #include "SearchSmallQueue.h"
 
 SearchBehavior* SearchSmallQueue::copy() const {

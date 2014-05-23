@@ -9,10 +9,9 @@
 #define CLIENT_H_
 
 #include "PaymentType.h"
+#include "SearchBehavior.h"
 #include "../dataStructures/Queue.h"
-
-class SearchBehavior;
-class Cashier;
+#include "../cashier/Cashier.h"
 
 class Client {
 public:

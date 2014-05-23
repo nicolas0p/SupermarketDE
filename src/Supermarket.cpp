@@ -18,7 +18,7 @@
 #include "dataStructures/CircularList.h"
 
 
-Supermarket::Supermarket(const std::string& name, const Queue<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
+Supermarket::Supermarket(const std::string& name, const CircularList<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
 		_name(name),
 		_cashiers(cashiers),
 		_currentTime(),
@@ -117,7 +117,7 @@ std::string Supermarket::incomeOfCashiers() const {
  */
 std::string Supermarket::profitOfCashiers() const {
 	std::stringstream string;
-	for (Queue<Cashier>::const_iterator cashier = _cashiers.begin(); cashier != _cashiers.end(); ++cashier) {
+	for (CircularList<Cashier>::const_iterator cashier = _cashiers.begin(); cashier != _cashiers.end(); ++cashier) {
 		double cashierCost = cashier->salary() * (_totalRuntime - cashier->timeOfArrival()) / 756000;
 		if (cashier->overTime()) {
 			cashierCost *= 2;

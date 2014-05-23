@@ -20,7 +20,6 @@ class CircularList {
 
 		Node(const Node& other) :
 				previous(other.previous), next(other.next) {
-
 		}
 
 		Node *previous, *next;
@@ -85,7 +84,6 @@ public:
 
 	CircularList() :
 			_size(0), head(0) {
-		head->next = head->previous = head;
 	}
 
 	CircularList(const CircularList<T>& other) :
@@ -93,15 +91,25 @@ public:
 	}
 
 	void push_back(const T& info) {
-		Node *novo = new Node(head->previous, head, info);
-		head->previous->next = novo;
-		head->previous = novo;
-
+		Node *novo = new Node(0, 0, info);
+		if (_size == 0) {
+			head = novo->next = novo->previous = novo;
+		} else {
+			head->previous->next = novo;
+			head->previous = novo;
+		}
 		++_size;
 	}
 
 	void push_front(const T& dado) {
-		head->next = head->next->previous = new Node(head, head->next, dado);
+		Node *novo = new Node(0, 0, dado);
+		if (_size == 0) {
+			head = novo->next = novo->previous = novo;
+		}
+		else {
+			head->next = head->next->previous = novo;
+		}
+		++_size;
 	}
 
 	void push(int position, const T& dado) {
@@ -169,6 +177,10 @@ public:
 		return atual->data;
 	}
 
+	~CircularList() {
+		delete head;
+	}
+
 	bool empty() const {
 		return _size == 0;
 	}
@@ -199,7 +211,6 @@ public:
 private:
 	int _size;
 	Node *head;
-
 };
 
 #endif /* LISTACIRCULAR_H_ */

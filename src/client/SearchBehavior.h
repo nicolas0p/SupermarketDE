@@ -9,7 +9,9 @@
 #define SEARCHBEHAVIOR_H_
 
 #include "../dataStructures/CircularList.h"
-#include "../cashier/Cashier.h"
+#include "../dataStructures/Queue.h"
+
+class Cashier;
 
 class SearchBehavior {
 public:

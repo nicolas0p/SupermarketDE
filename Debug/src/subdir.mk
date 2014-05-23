@@ -4,31 +4,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../cashier/BadProcessment.cpp \
-../cashier/Cashier.cpp \
-../cashier/GoodProcessment.cpp \
-../cashier/MediumProcessment.cpp \
-../cashier/ProcessBehavior.cpp 
+../src/Main.cpp \
+../src/Supermarket.cpp \
+../src/makeSupermarket.cpp 
 
 OBJS += \
-./cashier/BadProcessment.o \
-./cashier/Cashier.o \
-./cashier/GoodProcessment.o \
-./cashier/MediumProcessment.o \
-./cashier/ProcessBehavior.o 
+./src/Main.o \
+./src/Supermarket.o \
+./src/makeSupermarket.o 
 
 CPP_DEPS += \
-./cashier/BadProcessment.d \
-./cashier/Cashier.d \
-./cashier/GoodProcessment.d \
-./cashier/MediumProcessment.d \
-./cashier/ProcessBehavior.d 
+./src/Main.d \
+./src/Supermarket.d \
+./src/makeSupermarket.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-cashier/%.o: ../cashier/%.cpp
+src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
-	@echo 'Invoking: Cross G++ Compiler'
+	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '

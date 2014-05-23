@@ -35,8 +35,6 @@ public:
 	int timeOfArrival() const;
 	bool overTime() const;
 
-	Cashier();
-
 private:
 	std::string _id;
 	double _salary;

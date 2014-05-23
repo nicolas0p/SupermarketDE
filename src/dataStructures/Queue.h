@@ -5,8 +5,8 @@
  *      Author: nicolas
  */
 
-#ifndef LISTACIRCULAR_H_
-#define LISTACIRCULAR_H_
+#ifndef QUEUE_H_
+#define QUEUE_H_
 
 #include <stdexcept>
 
@@ -15,14 +15,10 @@ class Queue {
 
 	struct Node {
 		Node(Node *ant, Node *prox, T data) :
-				previous(ant), next(prox), data(data) {
+				_previous(ant), _next(prox), data(data) {
 		}
 
-		Node(const Node& other) : previous(other.previous), next(other.next) {
-
-		}
-
-		Node *previous, *next;
+		Node *_previous, *_next;
 		T data;
 	};
 
@@ -41,7 +37,7 @@ class Queue {
 		}
 
 		iterator_base& operator++() {
-			this->ptr = this->ptr->next;
+			this->ptr = this->ptr->_next;
 			return *this;
 		}
 
@@ -83,30 +79,31 @@ class Queue {
 public:
 
 	Queue() :
-			_size(0), head(0), last(0) {
+			_size(0), _head(0), _last(0) {
 	}
-	Queue(const Queue<T>& other) :
-			_size(other.size()), head(new Node(other.head)), last(new Node(other.last)) {
+
+	Queue(const Queue<T>& other) {
+
 	}
 
 	void push_back(const T& dado) {
 		Node *novo = new Node(0, 0, dado);
 		if (_size == 0) {
-			head = last = novo;
+			_head = _last = novo;
 		} else {
-			last->next = novo;
-			last = novo;
+			_last->_next = novo;
+			_last = novo;
 		}
 		++_size;
 	}
 
 	T pop_front() {
-		Node *ret = head;
+		Node *ret = _head;
 		if (_size == 1) {
-			head = last = 0;
+			_head = _last = 0;
 		} else {
-			head = head->next;
-			head->previous = 0;
+			_head = _head->_next;
+			_head->_previous = 0;
 		}
 
 		T retu = ret->data;
@@ -119,12 +116,12 @@ public:
 	}
 
 	T at(int position) const {
-		Node *atual = head->next;
+		Node *atual = _head->_next;
 		if (position < 0 || position >= _size)
 			throw std::out_of_range("");
 
 		for (int i = 1; i <= position; ++i) {
-			atual = atual->next;
+			atual = atual->_next;
 			if (i == position) {
 				break;
 			}
@@ -132,12 +129,17 @@ public:
 		return atual->data;
 	}
 
+	~Queue() {
+		delete _last;
+		delete _head;
+	}
+
 	T back() const {
-		return last->data;
+		return _last->data;
 	}
 
 	T front() const {
-		return head->data;
+		return _head->data;
 	}
 
 	bool empty() const {
@@ -152,25 +154,25 @@ public:
 	typedef iterator_base<const T> const_iterator;
 
 	iterator begin() {
-		return iterator(head->next);
+		return iterator(_head->_next);
 	}
 
 	iterator end() {
-		return iterator(head);
+		return iterator(_head);
 	}
 
 	const_iterator begin() const {
-		return const_iterator(head->next);
+		return const_iterator(_head->_next);
 	}
 
 	const_iterator end() const {
-		return const_iterator(head);
+		return const_iterator(_head);
 	}
 
 private:
 	int _size;
-	Node *head;
-	Node *last;
+	Node *_head;
+	Node *_last;
 };
 
-#endif /* LISTACIRCULAR_H_ */
+#endif /* QUEUE_H_ */

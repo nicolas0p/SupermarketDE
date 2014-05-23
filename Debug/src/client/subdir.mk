@@ -4,28 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../client/Client.cpp \
-../client/SearchLessItems.cpp \
-../client/SearchSmallQueue.cpp \
-../client/makeRandomClient.cpp 
+../src/client/Client.cpp \
+../src/client/SearchLessItems.cpp \
+../src/client/SearchSmallQueue.cpp \
+../src/client/makeRandomClient.cpp 
 
 OBJS += \
-./client/Client.o \
-./client/SearchLessItems.o \
-./client/SearchSmallQueue.o \
-./client/makeRandomClient.o 
+./src/client/Client.o \
+./src/client/SearchLessItems.o \
+./src/client/SearchSmallQueue.o \
+./src/client/makeRandomClient.o 
 
 CPP_DEPS += \
-./client/Client.d \
-./client/SearchLessItems.d \
-./client/SearchSmallQueue.d \
-./client/makeRandomClient.d 
+./src/client/Client.d \
+./src/client/SearchLessItems.d \
+./src/client/SearchSmallQueue.d \
+./src/client/makeRandomClient.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-client/%.o: ../client/%.cpp
+src/client/%.o: ../src/client/%.cpp
 	@echo 'Building file: $<'
-	@echo 'Invoking: Cross G++ Compiler'
+	@echo 'Invoking: GCC C++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '

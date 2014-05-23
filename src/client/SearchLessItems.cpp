@@ -6,7 +6,7 @@
  */
 
 #include "../dataStructures/CircularList.h"
-
+#include "../cashier/Cashier.h"
 #include "SearchLessItems.h"
 #include "SearchBehavior.h"
 

@@ -81,7 +81,7 @@ double Client::cartValue() const {
  * @brief Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente
  * @param Vetor de caixas de onde sera escolhido um
  */
-void Client::chooseCashier(CircularList<Cashier> &cashiers) {
+void Client::chooseCashier(Queue<Cashier> &cashiers) {
 	Cashier &c = _searchBehavior->search(cashiers);
 	c.addClient(*this);
 }

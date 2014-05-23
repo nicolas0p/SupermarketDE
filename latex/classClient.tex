@@ -1,0 +1,66 @@
+\hypertarget{classClient}{\section{Client Class Reference}
+\label{classClient}\index{Client@{Client}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}{{\bfseries Client} (const \hyperlink{classSearchBehavior}{Search\-Behavior} \&search\-Behavior, Payment\-Type payment\-Type, int time\-Of\-Arrival, int cart\-Size, double cart\-Value)}\label{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}
+
+\item 
+\hypertarget{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}{{\bfseries Client} (const \hyperlink{classClient}{Client} \&other)}\label{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}
+
+\item 
+\hypertarget{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}{\hyperlink{classClient}{Client} \& {\bfseries operator=} (\hyperlink{classClient}{Client} other)}\label{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}
+
+\item 
+\hypertarget{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}{int {\bfseries cart\-Size} () const }\label{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}
+
+\item 
+\hypertarget{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}{double {\bfseries cart\-Value} () const }\label{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}
+
+\item 
+\hypertarget{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}{Payment\-Type {\bfseries payment\-Type} () const }\label{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}
+
+\item 
+\hypertarget{classClient_ae56c063a8bc1c57e9c47ad88b1770994}{int {\bfseries time\-Of\-Departure} () const }\label{classClient_ae56c063a8bc1c57e9c47ad88b1770994}
+
+\item 
+\hypertarget{classClient_af327f525b4cf7838d97c095c8dd00e60}{int {\bfseries time\-Of\-Arrival} () const }\label{classClient_af327f525b4cf7838d97c095c8dd00e60}
+
+\item 
+\hypertarget{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}{void {\bfseries time\-Of\-Departure} (int time\-Of\-Departure)}\label{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}
+
+\item 
+void \hyperlink{classClient_a692860756fa31e443b61d5a897f0f46b}{choose\-Cashier} (\hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&cashiers)
+\begin{DoxyCompactList}\small\item\em Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}{void {\bfseries swap} (\hyperlink{classClient}{Client} \&first, \hyperlink{classClient}{Client} \&second)}\label{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classClient_a692860756fa31e443b61d5a897f0f46b}{\index{Client@{Client}!choose\-Cashier@{choose\-Cashier}}
+\index{choose\-Cashier@{choose\-Cashier}!Client@{Client}}
+\subsubsection[{choose\-Cashier}]{\setlength{\rightskip}{0pt plus 5cm}void Client\-::choose\-Cashier (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue}$<$ {\bf Cashier} $>$ \&}]{cashiers}
+\end{DoxyParamCaption}
+)}}\label{classClient_a692860756fa31e443b61d5a897f0f46b}
+
+
+Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vetor} & de caixas de onde sera escolhido um \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+client/Client.\-h\item 
+client/Client.\-cpp\end{DoxyCompactItemize}

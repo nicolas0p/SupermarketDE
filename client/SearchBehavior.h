@@ -23,7 +23,7 @@ public:
 	 *
 	 * @param Vetor de caixas de onde sera escolhido uma fila.
 	 */
-	virtual Cashier &search(CircularList<Cashier> &cashiers) const = 0;
+	virtual Cashier &search(Queue<Cashier> &cashiers) const = 0;
 };
 
 #endif /* SEARCHBEHAVIOR_H_ */

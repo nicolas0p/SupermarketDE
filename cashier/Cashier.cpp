@@ -5,7 +5,6 @@
  *      Author: arthurhortmannerpen
  */
 
-#include <deque>
 #include <string>
 #include <iostream>
 
@@ -16,24 +15,18 @@
 Cashier::Cashier(std::string id, double salary,
 		const ProcessBehavior &processBehavior, int timeOfArrival,
 		bool overTime) :
-		_id(id), _salary(salary), _queue(std::deque<Client>()), _totalWaitingTime(), _clientsServed(), _totalIncome(), _numOfItems(), _processBehavior(
+		_id(id), _salary(salary), _queue(Queue<Client>()), _totalWaitingTime(), _clientsServed(), _totalIncome(), _numOfItems(), _processBehavior(
 				processBehavior.copy()), _timeOfArrival(timeOfArrival), _overTime(
 				overTime) {
 }
-/**
- * @brief Construtor de cópia. Cria um caixa baseado em um outro
- * @param Outro caixa, o qual sera copiado
- */
+
 Cashier::Cashier(const Cashier& other) :
 		_id(other._id), _salary(other._salary), _queue(
-				std::deque<Client>(other._queue)), _totalWaitingTime(
+				Queue<Client>(other._queue)), _totalWaitingTime(
 				other._totalWaitingTime), _clientsServed(other._clientsServed), _totalIncome(
 				other._totalIncome), _numOfItems(other._numOfItems), _processBehavior(
 				other._processBehavior->copy()), _timeOfArrival(
 				other._timeOfArrival), _overTime(other._overTime) {
-}
-
-Cashier::Cashier() {
 }
 
 Cashier& Cashier::operator=(Cashier other) {

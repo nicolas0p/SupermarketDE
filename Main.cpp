@@ -8,7 +8,6 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <vector>
 #include <stdlib.h>
 
 #include "Supermarket.h"
@@ -22,8 +21,7 @@ using namespace std;
 
 int main() {
 	srand(time(NULL));
-	CircularList<Cashier> list;
-	cout << "hey you";
+	Queue<Cashier> list;
 	Supermarket s = makeSupermarketFile();
 	s.run();
 	cout << "Supermercado " << s.name() << endl;

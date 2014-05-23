@@ -27,7 +27,7 @@ Supermarket makeSupermarketConsole() {
 	int tamanhoMaxFila;
 	int tempoMedioNovosClientes;
 	int numeroDeCaixas = 0;
-	CircularList<Cashier> cashiers;
+	Queue<Cashier> cashiers;
 	cout << "Insira o nome do supermercado:\n";
 	getline(cin, nomeSupermercado);
 
@@ -104,7 +104,7 @@ Supermarket makeSupermarketConsole() {
 Supermarket makeSupermarketFile() {
 	cout << "hey you";
 	string SupermarketName;
-	CircularList<Cashier> cashiers;
+	Queue<Cashier> cashiers;
 	int tempoMedioNovosClientes;
 	int tempoSimulacao;
 	int tamanhoMaxFila = 9;

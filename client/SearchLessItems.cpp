@@ -14,8 +14,8 @@ SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
 }
 
-Cashier &SearchLessItems::search(CircularList<Cashier> &cashiers) const {
-	CircularList<Cashier>::iterator best = cashiers.begin();
+Cashier &SearchLessItems::search(Queue<Cashier> &cashiers) const {
+	Queue<Cashier>::iterator best = cashiers.begin();
 	if (cashiers.size() == 1) {
 		if (best->queueSize() > 9) {
 			throw 0;
@@ -23,7 +23,7 @@ Cashier &SearchLessItems::search(CircularList<Cashier> &cashiers) const {
 		return *best;
 	}
 	bool leave = true;
-	CircularList<Cashier>::iterator it = best;
+	Queue<Cashier>::iterator it = best;
 	for (++it; it != cashiers.end(); ++it) {
 		if (it->queueSize() < 10) {
 			leave = false;

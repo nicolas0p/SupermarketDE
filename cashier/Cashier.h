@@ -9,8 +9,8 @@
 #define CASHIER_H_
 
 #include <string>
-#include <deque>
 
+#include "../dataStructures/Queue.h"
 #include "../client/Client.h"
 #include "ProcessBehavior.h"
 
@@ -40,7 +40,7 @@ public:
 private:
 	std::string _id;
 	double _salary;
-	std::deque<Client> _queue;
+	Queue<Client> _queue;
 	int _totalWaitingTime;
 	int _clientsServed;
 	double _totalIncome;

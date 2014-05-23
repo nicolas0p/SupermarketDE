@@ -13,10 +13,10 @@ SearchBehavior* SearchSmallQueue::copy() const {
 	return new SearchSmallQueue();
 }
 
-Cashier &SearchSmallQueue::search(CircularList<Cashier> &cashiers) const {
-	CircularList<Cashier>::iterator best = cashiers.begin();
+Cashier &SearchSmallQueue::search(Queue<Cashier> &cashiers) const {
+	Queue<Cashier>::iterator best = cashiers.begin();
 	if (cashiers.size() != 1) {
-		CircularList<Cashier>::iterator it = best;
+		Queue<Cashier>::iterator it = best;
 		for (++it; it != cashiers.end(); ++it) {
 			if (it->queueSize() < best->queueSize()) {
 				best = it;

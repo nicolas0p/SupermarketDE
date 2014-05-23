@@ -14,7 +14,7 @@
 class SearchLessItems: public SearchBehavior {
 public:
 	SearchBehavior *copy() const;
-	Cashier &search(CircularList<Cashier> &cashiers) const;
+	Cashier &search(Queue<Cashier> &cashiers) const;
 };
 
 #endif /* SEARCHLESSITEMS_H_ */

@@ -1,5 +1,5 @@
 /*
- * ListaCircular.h
+ * CircularList.h
  *
  *  Created on: 07/05/2014
  *      Author: nicolas
@@ -16,6 +16,11 @@ class CircularList {
 	struct Node {
 		Node(Node *ant, Node *prox, T data) :
 				previous(ant), next(prox), data(data) {
+		}
+
+		Node(const Node& other) :
+				previous(other.previous), next(other.next) {
+
 		}
 
 		Node *previous, *next;
@@ -79,8 +84,12 @@ class CircularList {
 public:
 
 	CircularList() :
-			_size(0), head(new Node(0, 0, T())) {
+			_size(0), head(0) {
 		head->next = head->previous = head;
+	}
+
+	CircularList(const CircularList<T>& other) :
+			_size(other.size), head(new Node(other.head)) {
 	}
 
 	void push_back(const T& info) {
@@ -107,7 +116,7 @@ public:
 
 		Node *atual = head;
 		for (int i = 0; i < position; ++i) { //novo vai entrar antes do atual. PosicaoAtual = posicao
-				atual = atual->next;
+			atual = atual->next;
 		}
 
 		Node *novo = new Node(atual->previous, atual, dado);
@@ -146,7 +155,7 @@ public:
 		return ret;
 	}
 
-	T& at(int position) const {
+	T at(int position) const {
 		Node *atual = head->next;
 		if (position < 0 || position >= _size)
 			throw std::out_of_range("");

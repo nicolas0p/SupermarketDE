@@ -9,7 +9,7 @@
 #define CLIENT_H_
 
 #include "PaymentType.h"
-#include "../dataStructures/CircularList.h"
+#include "../dataStructures/Queue.h"
 
 class SearchBehavior;
 class Cashier;
@@ -28,7 +28,7 @@ public:
 	int timeOfDeparture() const;
 	int timeOfArrival() const;
 	void timeOfDeparture(int timeOfDeparture);
-	void chooseCashier(CircularList<Cashier> &cashiers);
+	void chooseCashier(Queue<Cashier> &cashiers);
 
 	Client();
 

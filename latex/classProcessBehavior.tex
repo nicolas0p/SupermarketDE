@@ -1,0 +1,56 @@
+\hypertarget{classProcessBehavior}{\section{Process\-Behavior Class Reference}
+\label{classProcessBehavior}\index{Process\-Behavior@{Process\-Behavior}}
+}
+Inheritance diagram for Process\-Behavior\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classProcessBehavior}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classProcessBehavior_a17faac1683e9da239d33026db1fd11f8}{process\-Time} (const \hyperlink{classClient}{Client} \&client)
+\begin{DoxyCompactList}\small\item\em Calcula o tempo de saída do cliente recebido. \end{DoxyCompactList}\item 
+\hypertarget{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{virtual \hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ {\bfseries copy} () const =0}\label{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{virtual int {\bfseries cart\-Size\-Factor} ()=0}\label{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}
+
+\item 
+\hypertarget{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{virtual int {\bfseries check\-Payment\-Time} ()=0}\label{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classProcessBehavior_a17faac1683e9da239d33026db1fd11f8}{\index{Process\-Behavior@{Process\-Behavior}!process\-Time@{process\-Time}}
+\index{process\-Time@{process\-Time}!ProcessBehavior@{Process\-Behavior}}
+\subsubsection[{process\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Process\-Behavior\-::process\-Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client} \&}]{client}
+\end{DoxyParamCaption}
+)}}\label{classProcessBehavior_a17faac1683e9da239d33026db1fd11f8}
+
+
+Calcula o tempo de saída do cliente recebido. 
+
+Utilizando a implementação do caixa do comportamento de processamento de clientes, calcula o tempo de saída do cliente Existem 3 implementações diferentes. Processamento bom, médio e ruim. O que interfere no tempo de processamento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cliente} & que terá seu tempo de saída calculado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O horário que esse cliente sairá do supermercado 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cashier/Process\-Behavior.\-h\item 
+cashier/Process\-Behavior.\-cpp\end{DoxyCompactItemize}

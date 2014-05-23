@@ -16,7 +16,7 @@
 
 class Supermarket {
 public:
-	Supermarket(const std::string&, const CircularList<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
+	Supermarket(const std::string&, const Queue<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
 	virtual ~Supermarket();
 	void run();
 	std::string incomeOfCashiers() const;
@@ -33,7 +33,7 @@ private:
 	void updateCashiers();
 	void callNewCashier();
 	std::string _name;
-	CircularList<Cashier> _cashiers;
+	Queue<Cashier> _cashiers;
 	int _currentTime;
 	int _timeNextClient;
 	int _averageTimeNewClients; // tempo medio de chegada de clientes

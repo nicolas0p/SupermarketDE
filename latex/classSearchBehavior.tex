@@ -1,0 +1,47 @@
+\hypertarget{classSearchBehavior}{\section{Search\-Behavior Class Reference}
+\label{classSearchBehavior}\index{Search\-Behavior@{Search\-Behavior}}
+}
+Inheritance diagram for Search\-Behavior\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSearchBehavior}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSearchBehavior_a66f39c53cb1cb9dc029c6fdae55c6234}{virtual \hyperlink{classSearchBehavior}{Search\-Behavior} $\ast$ {\bfseries copy} () const =0}\label{classSearchBehavior_a66f39c53cb1cb9dc029c6fdae55c6234}
+
+\item 
+virtual \hyperlink{classCashier}{Cashier} \& \hyperlink{classSearchBehavior_a89f9439f664a750f08a9877710a0fd9f}{search} (\hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&cashiers) const =0
+\begin{DoxyCompactList}\small\item\em Metodo polimorfico para a escolha da melhor fila do caixa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSearchBehavior_a89f9439f664a750f08a9877710a0fd9f}{\index{Search\-Behavior@{Search\-Behavior}!search@{search}}
+\index{search@{search}!SearchBehavior@{Search\-Behavior}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Cashier}\& Search\-Behavior\-::search (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue}$<$ {\bf Cashier} $>$ \&}]{cashiers}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSearchBehavior_a89f9439f664a750f08a9877710a0fd9f}
+
+
+Metodo polimorfico para a escolha da melhor fila do caixa. 
+
+Existem duas implementaacoes para este metodo. A que escolhe a fila com menos pessoas e a que escolhe a fila com menos produtos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vetor} & de caixas de onde sera escolhido uma fila. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classSearchLessItems_a1ae7ed499cbee0e61edfc5d6778226c0}{Search\-Less\-Items}, and \hyperlink{classSearchSmallQueue_a0ea1eba216b5f265a10dd59287d56311}{Search\-Small\-Queue}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+client/Search\-Behavior.\-h\end{DoxyCompactItemize}

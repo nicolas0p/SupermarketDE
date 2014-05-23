@@ -14,7 +14,7 @@
 class SearchSmallQueue : public SearchBehavior {
 public:
 	SearchBehavior* copy() const;
-	Cashier& search(CircularList<Cashier> &cashiers) const;
+	Cashier& search(Queue<Cashier> &cashiers) const;
 };
 
 #endif /* SEARCHSMALLQUEUE_H_ */

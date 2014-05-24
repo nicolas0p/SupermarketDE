@@ -12,7 +12,6 @@
 #include <string>
 #include <iostream>
 
-//class ProcessBehavior;
 
 Cashier::Cashier(std::string id, double salary, const ProcessBehavior &processBehavior, int timeOfArrival, bool overTime):
         _id(id),

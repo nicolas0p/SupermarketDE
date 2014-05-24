@@ -9,20 +9,15 @@
 #include <vector>
 #include "SearchBehavior.h"
 
+
 SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
 }
 
 Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
 	std::vector<Cashier>::iterator best = cashiers.begin();
-	if (cashiers.size() == 1) {
-		if (best->queueSize() > 9) {
-			throw 0;
-		}
-		return *best;
-	}
-	bool leave = true;
-	for (std::vector<Cashier>::iterator it = best + 1; it != cashiers.end(); ++it) {
+	bool leave = best->queueSize() >= 10;
+	for (std::vector<Cashier>::iterator it = ++cashiers.begin(); it != cashiers.end(); ++it) {
 		if (it->queueSize() < 10) {
 			leave = false;
 		}
@@ -35,3 +30,5 @@ Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
 	}
 	return *best;
 }
+
+

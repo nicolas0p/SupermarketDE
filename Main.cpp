@@ -17,8 +17,6 @@
 #include "cashier/MediumProcessment.h"
 #include "cashier/BadProcessment.h" //                ARRUMAR EXCEPTION GAMBIARRA NA PROCURA DA FILA
 #include "makeSupermarket.h"
-#include "cashier/ClientQueue.h"
-#include "cashier/ClientQueue.h"
 #include "client/Client.h"
 #include "client/PaymentType.h"
 #include "client/SearchSmallQueue.h"

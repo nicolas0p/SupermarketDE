@@ -151,16 +151,6 @@ void pegaLinhaPulando(ifstream &file, string &input, char c) {
 	while (input.length() == 0 || input.at(0) == '#');
 }
 
-//int pegaProximoNumero(ifstream &file) {
-//	string input;
-//	int valor;
-//	stringstream inputstream;
-//	pegaLinhaPulando(file, input); // pega o numero de caixas
-//	inputstream << input;
-//	inputstream >> valor;
-//	return valor;
-//}
-
 double pegaProximoNumero(ifstream &file) {
 	string input;
 	double valor;

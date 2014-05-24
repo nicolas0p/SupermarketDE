@@ -10,7 +10,7 @@
 
 #include <string>
 #include <deque>
-#include "ClientQueue.h"
+#include "Queue.h"
 
 class Client;
 class ProcessBehavior;
@@ -39,7 +39,7 @@ public:
 private:
 	std::string _id;
 	double _salary;
-	ClientQueue _queue;
+	Queue<Client> _queue;
 	int _totalWaitingTime;
 	int _clientsServed;
 	double _totalIncome;

@@ -17,7 +17,7 @@
 Cashier::Cashier(std::string id, double salary, const ProcessBehavior &processBehavior, int timeOfArrival, bool overTime):
         _id(id),
         _salary(salary),
-        _queue(std::deque<Client>()),
+        _queue(),
         _totalWaitingTime(),
         _clientsServed(),
         _totalIncome(),
@@ -25,12 +25,13 @@ Cashier::Cashier(std::string id, double salary, const ProcessBehavior &processBe
         _processBehavior(processBehavior.copy()),
         _timeOfArrival(timeOfArrival),
 		_overTime(overTime)
-		{}
+		{
+		}
 
 Cashier::Cashier(const Cashier& other) :
         _id(other._id),
         _salary(other._salary),
-        _queue(std::deque<Client>(other._queue)),
+        _queue(other._queue),
         _totalWaitingTime(other._totalWaitingTime),
         _clientsServed(other._clientsServed),
         _totalIncome(other._totalIncome),
@@ -73,7 +74,7 @@ void Cashier::addClient(Client &client) {
 	}
 	client.timeOfDeparture(timeOfDeparture);
 	_numOfItems += client.cartSize();
-	_queue.push_back(client);
+	_queue.push(client);
 }
 
 void Cashier::update(int currentTime) {
@@ -85,7 +86,7 @@ void Cashier::update(int currentTime) {
 		_totalWaitingTime += currentTime - firstClient.timeOfArrival();
 		_totalIncome += firstClient.cartValue();
 		_numOfItems -= firstClient.cartSize();
-		_queue.pop_front();
+		_queue.pop();
 	}
 }
 

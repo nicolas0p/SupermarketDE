@@ -9,6 +9,7 @@
 #include <vector>
 #include "SearchBehavior.h"
 
+#include <iostream>
 
 SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
@@ -26,7 +27,7 @@ Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
 		}
 	}
 	if (leave) {
-		throw 0;
+		throw std::exception();
 	}
 	return *best;
 }

@@ -68,7 +68,7 @@ Supermarket makeSupermarketConsole() {
 	char eficiencia;
 	double salario;
 	for (int i = 0; i < numeroDeCaixas; ++i) {
-		cout << "Insira o nome do caixa " << i << endl;
+		cout << "Insira o nome do caixa " << (i + 1) << endl;
 		getline(cin, nomeDoCaixa);
 
 		eficiencia = 'a';
@@ -103,62 +103,43 @@ Supermarket makeSupermarketConsole() {
 Supermarket makeSupermarketFile() {
 	string SupermarketName;
 	vector<Cashier> cashiers;
-	int tempoMedioNovosClientes;
 	int tempoSimulacao;
+	int tempoMedioNovosClientes;
+	int numCaixas;
 	int tamanhoMaxFila = 9;
 	ifstream file;
-	string input;
-	stringstream numStream;
-	file.open("config.txt");
-	if (file.is_open()) {
-		pegaLinhaPulando(file, SupermarketName); // pega o nome
-		cout << "leu o nome" << endl;
-		pegaLinhaPulando(file, input); // pega o tempo de simulacao
-		numStream << input;
-		numStream >> tempoSimulacao;
-		pegaLinhaPulando(file, input); //pega o tempo medio de novos clientes
-		numStream << input;
-		numStream >> tempoMedioNovosClientes;
-		int numCaixas;
-		pegaLinhaPulando(file, input); // pega o numero de caixas
-		numStream << input;
-		numStream >> numCaixas;
+	file.exceptions(ifstream::failbit); //cobre tanto abertura arquivo quanto ler do final
+	file.open("config.txt"); //this can throw exception
+	pegaLinhaPulando(file, SupermarketName); // pega o nome
+	tempoSimulacao = pegaProximoNumero(file); //pega o tempo total
+	tempoMedioNovosClientes = pegaProximoNumero(file); //pega tempo chegada clientes
+	numCaixas = pegaProximoNumero(file); // pega numero de caixas
+	for (int i = 0; i < numCaixas; ++i) {
 		string nomeCaixa;
 		int eficiencia;
 		double salario;
-		for (int i = 0; i < numCaixas; ++i) {
-			pegaLinhaPulando(file, nomeCaixa, ' '); //pega nome do caixa
-			pegaLinhaPulando(file, input, ' '); // pega eficiencia do caixa
-			numStream << input;
-			numStream >> eficiencia;
-			pegaLinhaPulando(file, input, ' '); //pega salario
-			numStream << input;
-			numStream >> salario;
-			switch (eficiencia) {
-			case 1:
-				cashiers.push_back(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
-				break;
-			case 2:
-				cashiers.push_back(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
-				break;
-			case 3:
-				cashiers.push_back(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
-				break;
-			}
+		pegaLinhaPulando(file, nomeCaixa, ' '); //pega nome do caixa
+		eficiencia = pegaProximoNumero(file, ' '); // pega eficiencia do caixa
+		salario = pegaProximoNumero(file, ' '); //pega salario
+		switch (eficiencia) {
+		case 1:
+			cashiers.push_back(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
+			break;
+		case 2:
+			cashiers.push_back(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
+			break;
+		case 3:
+			cashiers.push_back(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
+			break;
 		}
-		file.close();
-		return Supermarket(SupermarketName, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
 	}
-	else {
-		cout << "nao abre" << endl;
-		return Supermarket(SupermarketName, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
-	}
+	file.close();
+	return Supermarket(SupermarketName, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
 	}
 
 void pegaLinhaPulando(ifstream &file, string &input) {
 	do {
 		getline(file, input);
-		cout<< input<< endl;
 	}
 	while (input.length() == 0 || input.at(0) == '#');
 }
@@ -168,4 +149,34 @@ void pegaLinhaPulando(ifstream &file, string &input, char c) {
 		getline(file, input, c);
 	}
 	while (input.length() == 0 || input.at(0) == '#');
+}
+
+//int pegaProximoNumero(ifstream &file) {
+//	string input;
+//	int valor;
+//	stringstream inputstream;
+//	pegaLinhaPulando(file, input); // pega o numero de caixas
+//	inputstream << input;
+//	inputstream >> valor;
+//	return valor;
+//}
+
+double pegaProximoNumero(ifstream &file) {
+	string input;
+	double valor;
+	stringstream inputstream;
+	pegaLinhaPulando(file, input); // pega o numero de caixas
+	inputstream << input;
+	inputstream >> valor;
+	return valor;
+}
+
+double pegaProximoNumero(ifstream &file, char c) {
+	string input;
+	double valor;
+	stringstream inputstream;
+	pegaLinhaPulando(file, input, c); // pega o numero de caixas
+	inputstream << input;
+	inputstream >> valor;
+	return valor;
 }

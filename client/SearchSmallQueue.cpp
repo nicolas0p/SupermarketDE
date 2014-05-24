@@ -23,7 +23,7 @@ Cashier &SearchSmallQueue::search(std::vector<Cashier> &cashiers) const {
 		}
 	}
 	if (best->queueSize() > 9) {
-		throw 0;
+		throw std::exception();
 	}
 	return *best;
 }

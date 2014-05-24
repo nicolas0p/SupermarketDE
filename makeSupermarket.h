@@ -16,5 +16,7 @@ Supermarket makeSupermarketConsole();
 Supermarket makeSupermarketFile();
 void pegaLinhaPulando(std::ifstream &, std::string &);
 void pegaLinhaPulando(std::ifstream &, std::string &, char );
+double pegaProximoNumero(std::ifstream &);
+double pegaProximoNumero(std::ifstream &, char);
 
 #endif /* MAKESUPERMARKET_H_ */

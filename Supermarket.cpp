@@ -48,7 +48,7 @@ void Supermarket::lookForNextClient() {
 		try {
 			newClient.chooseCashier(_cashiers);
 		}
-		catch (int e) {
+		catch (std::exception& e) {
 			++_lostClients;
 			_lostIncome += newClient.cartValue() * 3;
 		}
@@ -63,25 +63,34 @@ void Supermarket::lookForNextClient() {
 }
 
 void Supermarket::updateCashiers() { //eh possivel melhorar isso. tambem deve-se pensar no choosebehavior
+	bool call = true;
 	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
 		_cashiers.at(i).update(_currentTime);
-	}
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
 		if (_cashiers.at(i).queueSize() <= _maxQueueSize) {
-			return;
+			call = false;
 		}
 	}
-	callNewCashier();
+	if (call) {
+		callNewCashier();
+	}
 }
 
 void Supermarket::callNewCashier() {
 	_cashiers.push_back(Cashier("Extra Cashier", 200, GoodProcessment(), _currentTime, true));
 }
 
+//std::string Supermarket::incomeOfCashiers() const {
+//	std::stringstream string;
+//	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
+//		string << _cashiers.at(i).id() << "\t\t\t" <<  _cashiers.at(i).totalIncome() << std::endl;
+//	}
+//	return string.str();
+//}
+
 std::string Supermarket::incomeOfCashiers() const {
 	std::stringstream string;
 	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		string << _cashiers.at(i).id() << "\t\t\t" << _cashiers.at(i).totalIncome() << std::endl;
+		string << _cashiers.at(i).id() << "\t\t\t" <<  _cashiers.at(i).totalIncome() << std::endl;
 	}
 	return string.str();
 }

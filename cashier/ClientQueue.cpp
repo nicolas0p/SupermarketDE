@@ -8,14 +8,20 @@
 #include "ClientQueue.h"
 #include <stdexcept>
 
+
 ClientQueue::ClientQueue() :
 	_size(0), _front(0), _back(0) {
 }
 
 ClientQueue::ClientQueue(const ClientQueue& other) :
-	_size(other._size),
-	_front(new Node(0, other._front->client))
+	_size(other._size)
 {
+	if (_size == 0) {
+		_front = 0;
+		_back = 0;
+		return;
+	}
+	_front = new Node(0, other._front->client);
 	Node *actual = _front;
 	for (Node *it = other._front->_next; it != 0; it = it->_next) {
 		Node *aux = new Node(0, it->client);
@@ -47,8 +53,7 @@ ClientQueue::~ClientQueue() {
 }
 
 void ClientQueue::push(const Client& client) {
-	++_size;
-	if (_size == 0) {
+	if (_size++ == 0) {
 		_front = _back = new Node(0, client);
 		return;
 	}

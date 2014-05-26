@@ -21,6 +21,50 @@ class CircularList {
 		T element;
 	};
 
+	template<typename U>
+	class iterator_base {
+
+	public:
+
+		iterator_base(Node *actual, Node *head) :
+				ptr(actual), head(head) {
+		}
+
+		iterator_base& operator++() {
+			ptr = ptr->next;
+			if (ptr == head)
+				ptr = 0;
+			return *this;
+		}
+
+		iterator_base operator++(int) {
+			iterator_base other(*this);
+			ptr = ptr->next;
+			if (ptr == head)
+				ptr = 0;
+			return other;
+		}
+
+		bool operator==(const iterator_base& other) const {
+			return ptr == other.ptr;
+		}
+
+		bool operator!=(const iterator_base& other) const {
+			return !(ptr == other.ptr);
+		}
+
+		U& operator*() const {
+			return ptr->element;
+		}
+
+		U* operator->() const {
+			return &(ptr->element);
+		}
+
+	private:
+		Node *ptr, *head;
+	};
+
 public:
 
 	CircularList() :
@@ -36,7 +80,8 @@ public:
 		_head = new Node(0, 0, other._head->element);
 		Node *actual = _head;
 		int i = 0;
-		for (Node *it = other._head->next; i < other.size() - 1; it = it->next, ++i) {
+		for (Node *it = other._head->next; i < other.size() - 1;
+				it = it->next, ++i) {
 			Node *aux = new Node(0, 0, it->element);
 			actual->next = aux;
 			aux->prev = actual;
@@ -75,16 +120,16 @@ public:
 			return;
 		}
 		if (_size == 1) {
-			_head->next = new Node(_head, _head, element);
-			_head->prev = _head->next;
+			_head->prev = new Node(_head, _head, element);
+			_head->next = _head->prev;
 			++_size;
 			return;
 		}
 		Node *aux = new Node(0, 0, element);
-		_head->next->prev = aux;
-		aux->next = _head->next;
-		aux->prev = _head;
-		_head->next = aux;
+		_head->prev->next = aux;
+		aux->prev = _head->prev;
+		aux->next = _head;
+		_head->prev = aux;
 		++_size;
 	}
 
@@ -117,6 +162,25 @@ public:
 
 	bool empty() const {
 		return _size == 0;
+	}
+
+	typedef iterator_base<T> iterator;
+	typedef iterator_base<const T> const_iterator;
+
+	iterator begin() {
+		return iterator(_head, _head);
+	}
+
+	iterator end() {
+		return iterator(0, _head);
+	}
+
+	const_iterator begin() const {
+		return const_iterator(_head, _head);
+	}
+
+	const_iterator end() const {
+		return const_iterator(0, _head);
 	}
 
 private:

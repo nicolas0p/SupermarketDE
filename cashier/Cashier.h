@@ -9,7 +9,6 @@
 #define CASHIER_H_
 
 #include <string>
-#include <deque>
 #include "Queue.h"
 
 class Client;

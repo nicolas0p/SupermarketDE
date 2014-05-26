@@ -8,9 +8,6 @@
 #include "Cashier.h"
 #include "../client/Client.h"
 #include "ProcessBehavior.h"
-#include <deque>
-#include <string>
-#include <iostream>
 
 
 Cashier::Cashier(std::string id, double salary, const ProcessBehavior &processBehavior, int timeOfArrival, bool overTime):

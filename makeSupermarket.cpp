@@ -8,9 +8,9 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <vector>
 #include <fstream>
 
+#include "CircularList.h"
 #include "makeSupermarket.h"
 #include "cashier/GoodProcessment.h"
 #include "cashier/MediumProcessment.h"
@@ -26,7 +26,7 @@ Supermarket makeSupermarketConsole() {
 	int tamanhoMaxFila;
 	int tempoMedioNovosClientes;
 	int numeroDeCaixas = 0;
-	vector<Cashier> cashiers;
+	CircularList<Cashier> cashiers;
 	cout << "Insira o nome do supermercado:\n";
 	getline(cin, nomeSupermercado);
 
@@ -88,13 +88,13 @@ Supermarket makeSupermarketConsole() {
 		}
 		switch (eficiencia) {
 		case 'b':
-			cashiers.push_back(Cashier(nomeDoCaixa, salario, GoodProcessment(), 0, false));
+			cashiers.push(Cashier(nomeDoCaixa, salario, GoodProcessment(), 0, false));
 			break;
 		case 'm':
-			cashiers.push_back(Cashier(nomeDoCaixa, salario, MediumProcessment(), 0, false));
+			cashiers.push(Cashier(nomeDoCaixa, salario, MediumProcessment(), 0, false));
 			break;
 		case 'r':
-			cashiers.push_back(Cashier(nomeDoCaixa, salario, BadProcessment(), 0, false));
+			cashiers.push(Cashier(nomeDoCaixa, salario, BadProcessment(), 0, false));
 		}
 	}
 	return Supermarket(nomeSupermercado, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
@@ -102,7 +102,7 @@ Supermarket makeSupermarketConsole() {
 
 Supermarket makeSupermarketFile() {
 	string SupermarketName;
-	vector<Cashier> cashiers;
+	CircularList<Cashier> cashiers;
 	int tempoSimulacao;
 	int tempoMedioNovosClientes;
 	int numCaixas;
@@ -123,13 +123,13 @@ Supermarket makeSupermarketFile() {
 		salario = pegaProximoNumero(file, ' '); //pega salario
 		switch (eficiencia) {
 		case 1:
-			cashiers.push_back(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
+			cashiers.push(Cashier(nomeCaixa, salario, GoodProcessment(), 0, false));
 			break;
 		case 2:
-			cashiers.push_back(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
+			cashiers.push(Cashier(nomeCaixa, salario, MediumProcessment(), 0, false));
 			break;
 		case 3:
-			cashiers.push_back(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
+			cashiers.push(Cashier(nomeCaixa, salario, BadProcessment(), 0, false));
 			break;
 		}
 	}
@@ -169,4 +169,6 @@ double pegaProximoNumero(ifstream &file, char c) {
 	inputstream << input;
 	inputstream >> valor;
 	return valor;
+}
+ valor;
 }

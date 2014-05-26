@@ -6,19 +6,18 @@
  */
 
 #include "SearchLessItems.h"
-#include <vector>
+#include "../CircularList.h"
 #include "SearchBehavior.h"
 
-#include <iostream>
 
 SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
 }
 
-Cashier &SearchLessItems::search(std::vector<Cashier> &cashiers) const {
-	std::vector<Cashier>::iterator best = cashiers.begin();
+Cashier &SearchLessItems::search(CircularList<Cashier> &cashiers) const {
+	CircularList<Cashier>::iterator best = cashiers.begin();
 	bool leave = best->queueSize() >= 10;
-	for (std::vector<Cashier>::iterator it = ++cashiers.begin(); it != cashiers.end(); ++it) {
+	for (CircularList<Cashier>::iterator it = ++cashiers.begin(); it != cashiers.end(); ++it) {
 		if (it->queueSize() < 10) {
 			leave = false;
 		}

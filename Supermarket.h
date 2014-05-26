@@ -8,14 +8,15 @@
 #ifndef SUPERMARKET_H_
 #define SUPERMARKET_H_
 
-#include <vector>
-#include "cashier/Cashier.h"
 #include <string>
 
-//implementar rule of three
+#include "CircularList.h"
+
+class Cashier;
+
 class Supermarket {
 public:
-	Supermarket(const std::string&, const std::vector<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
+	Supermarket(const std::string&, const CircularList<Cashier>&, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize);
 	virtual ~Supermarket();
 	void run();
 	std::string incomeOfCashiers() const;
@@ -32,7 +33,7 @@ private:
 	void updateCashiers();
 	void callNewCashier();
 	std::string _name;
-	std::vector<Cashier> _cashiers;
+	CircularList<Cashier> _cashiers;
 	int _currentTime;
 	int _timeNextClient;
 	int _averageTimeNewClients; // tempo medio de chegada de clientes
@@ -41,6 +42,9 @@ private:
 	double _lostIncome;
 	int _maxQueueSize;
 };
+
+#endif /* SUPERMARKET_H_ */
+
 
 #endif /* SUPERMARKET_H_ */
 

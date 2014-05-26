@@ -6,20 +6,22 @@
  */
 
 
-#include <vector>
-#include <iostream>
 #include <sstream>
 #include <string>
+
 #include <stdlib.h>
 #include <time.h>
 
+#include "Supermarket.h"
 #include "cashier/Cashier.h"
 #include "client/makeRandomClient.h"
-#include "Supermarket.h"
 #include "cashier/GoodProcessment.h"
+#include "CircularList.h"
+
+using namespace std;
 
 
-Supermarket::Supermarket(const std::string& name, const std::vector<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
+Supermarket::Supermarket(const string& name, const CircularList<Cashier>& cashiers, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize) :
 		_name(name),
 		_cashiers(cashiers),
 		_currentTime(),
@@ -48,7 +50,7 @@ void Supermarket::lookForNextClient() {
 		try {
 			newClient.chooseCashier(_cashiers);
 		}
-		catch (std::exception& e) {
+		catch (exception& e) {
 			++_lostClients;
 			_lostIncome += newClient.cartValue() * 3;
 		}
@@ -64,53 +66,47 @@ void Supermarket::lookForNextClient() {
 
 void Supermarket::updateCashiers() { //eh possivel melhorar isso. tambem deve-se pensar no choosebehavior
 	bool call = true;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		_cashiers.at(i).update(_currentTime);
-		if (_cashiers.at(i).queueSize() <= _maxQueueSize) {
+	for (CircularList<Cashier>::iterator it = _cashiers.begin(); it != _cashiers.end(); ++it) {
+		it->update(_currentTime);
+		if (it->queueSize() <= _maxQueueSize) {
 			call = false;
 		}
 	}
+
 	if (call) {
 		callNewCashier();
 	}
 }
 
 void Supermarket::callNewCashier() {
-	_cashiers.push_back(Cashier("Extra Cashier", 200, GoodProcessment(), _currentTime, true));
+	_cashiers.push(Cashier("Extra Cashier", 200, GoodProcessment(), _currentTime, true));
 }
 
-//std::string Supermarket::incomeOfCashiers() const {
-//	std::stringstream string;
-//	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-//		string << _cashiers.at(i).id() << "\t\t\t" <<  _cashiers.at(i).totalIncome() << std::endl;
-//	}
-//	return string.str();
-//}
-
-std::string Supermarket::incomeOfCashiers() const {
-	std::stringstream string;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		string << _cashiers.at(i).id() << "\t\t\t" <<  _cashiers.at(i).totalIncome() << std::endl;
+string Supermarket::incomeOfCashiers() const {
+	stringstream string;
+	for (CircularList<Cashier>::const_iterator it = _cashiers.begin(); it != _cashiers.end(); ++it) {
+			string << it->id() << "\t\t\t" <<  it->totalIncome() << endl;
 	}
+
 	return string.str();
 }
 
-std::string Supermarket::profitOfCashiers() const {
-	std::stringstream string;
-	for (std::vector<Cashier>::const_iterator cashier = _cashiers.begin(); cashier != _cashiers.end(); ++cashier) {
-		double cashierCost = cashier->salary() * (_totalRuntime - cashier->timeOfArrival()) / 756000;
-		if (cashier->overTime()) {
+string Supermarket::profitOfCashiers() const {
+	stringstream string;
+	for (CircularList<Cashier>::const_iterator it = _cashiers.begin(); it != _cashiers.end(); ++it) {
+		double cashierCost = it->salary() * (_totalRuntime - it->timeOfArrival()) / 756000;
+		if (it->overTime()) {
 			cashierCost *= 2;
 		}
-		string << cashier->id() << "\t\t\t" << cashier->totalIncome() - cashierCost << std::endl;
+		string << it->id() << "\t\t\t" << it->totalIncome() - cashierCost << endl;
 	}
 	return string.str();
 }
 
 double Supermarket::totalIncome() const {
 	double totalIncome = 0;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		totalIncome += _cashiers.at(i).totalIncome();
+	for (CircularList<Cashier>::const_iterator it = _cashiers.begin(); it != _cashiers.end(); ++it) {
+		totalIncome += it->totalIncome();
 	}
 	return totalIncome;
 }
@@ -122,9 +118,25 @@ double Supermarket::averageIncomePerCashier() const {
 double Supermarket::averageWaitingTime() const {
 	double totalWaitingTime = 0;
 	int totalClientsServed = 0;
-	for (unsigned int i = 0; i < _cashiers.size(); ++i) {
-		totalWaitingTime += _cashiers.at(i).totalWaitingTime();
-		totalClientsServed += _cashiers.at(i).clientsServed();
+	for (CircularList<Cashier>::const_iterator it = _cashiers.begin(); it != _cashiers.end(); ++it) {
+		totalWaitingTime += it->totalWaitingTime();
+		totalClientsServed += it->clientsServed();
+	}
+	return totalWaitingTime / totalClientsServed;
+}
+
+string Supermarket::name() const {
+	return _name;
+}
+
+int Supermarket::lostClients() const {
+	return _lostClients;
+}
+
+double Supermarket::lostIncome() const {
+	return _lostIncome;
+}
+.clientsServed();
 	}
 	return totalWaitingTime / totalClientsServed;
 }

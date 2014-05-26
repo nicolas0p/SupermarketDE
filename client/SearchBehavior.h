@@ -9,13 +9,13 @@
 #define SEARCHBEHAVIOR_H_
 
 #include "../cashier/Cashier.h"
-#include <vector>
+#include "../CircularList.h"
 
 class SearchBehavior {
 public:
 	virtual ~SearchBehavior() {}
 	virtual SearchBehavior* copy() const = 0; //para poder criar o Client com (SearchLessItens(), blablabla)
-	virtual Cashier &search(std::vector<Cashier> &cashiers) const = 0;
+	virtual Cashier &search(CircularList<Cashier> &cashiers) const = 0;
 };
 
 #endif /* SEARCHBEHAVIOR_H_ */

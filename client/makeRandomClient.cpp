@@ -12,8 +12,6 @@
 #include "PaymentType.h"
 #include "stdlib.h"
 #include "time.h"
-#include "PaymentType.h"
-#include "SearchBehavior.h"
 
 Client makeRandomClient(int timeOfArrival) {
 	int cartSize = rand() % 99 + 2; //tamanho do carrinho, de 2 a 100

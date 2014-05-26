@@ -56,7 +56,3 @@ int main(int argc, char** argv) {
 	}
 	cin.get();
 }
-failure &e) {
-//		cout << "Erro ao tentar abrir e ler o arquivo config.txt." << endl;
-//	}
-}

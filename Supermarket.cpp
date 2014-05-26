@@ -136,19 +136,3 @@ int Supermarket::lostClients() const {
 double Supermarket::lostIncome() const {
 	return _lostIncome;
 }
-.clientsServed();
-	}
-	return totalWaitingTime / totalClientsServed;
-}
-
-std::string Supermarket::name() const {
-	return _name;
-}
-
-int Supermarket::lostClients() const {
-	return _lostClients;
-}
-
-double Supermarket::lostIncome() const {
-	return _lostIncome;
-}

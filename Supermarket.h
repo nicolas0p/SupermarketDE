@@ -45,17 +45,3 @@ private:
 
 #endif /* SUPERMARKET_H_ */
 
-
-#endif /* SUPERMARKET_H_ */
-
-
-// TODO:
-//ENTRADA DE DADOS: arquivo de configuracao
-
-//lucro por caixa: desconta-se o salario do caixa no periodo compreedido de simulacao. Como guardar esse tempo?
-
-//numero de clientes que desistiram por filas longas
-// cliente abandonar carrinho quando todas as filas tiverem tamanho > 10
-//faturamento que deixou de ser realizado pela desistencia desses clientes
-
-// chamar mais caixa para trabalhar se o tamanho

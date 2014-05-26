@@ -170,5 +170,3 @@ double pegaProximoNumero(ifstream &file, char c) {
 	inputstream >> valor;
 	return valor;
 }
- valor;
-}

@@ -14,6 +14,14 @@ SearchBehavior* SearchLessItems::copy() const {
 	return new SearchLessItems();
 }
 
+/**
+	 * @brief Metodo polimorfico para a escolha da melhor fila do caixa.
+	 *
+	 * @details Existem duas implementaacoes para este metodo. A que escolhe a fila com menos pessoas
+	 * e a que escolhe a fila com menos produtos.
+	 *
+	 * @param Vetor de caixas de onde sera escolhido uma fila.
+	 */
 Cashier &SearchLessItems::search(Queue<Cashier> &cashiers) const {
 	Queue<Cashier>::iterator best = cashiers.begin();
 	if (cashiers.size() == 1) {

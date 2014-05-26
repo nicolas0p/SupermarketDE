@@ -1,48 +1,59 @@
 \hypertarget{classSearchSmallQueue}{\section{Search\-Small\-Queue Class Reference}
 \label{classSearchSmallQueue}\index{Search\-Small\-Queue@{Search\-Small\-Queue}}
 }
-Inheritance diagram for Search\-Small\-Queue\-:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Search\-Small\-Queue.\-h$>$}
+
+
+
+Inheritance diagram for Search\-Small\-Queue\-:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classSearchSmallQueue}
+\includegraphics[width=186pt]{classSearchSmallQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Search\-Small\-Queue\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classSearchSmallQueue__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSearchSmallQueue_a060043acfc959d9fc046b99f19518401}{\hyperlink{classSearchBehavior}{Search\-Behavior} $\ast$ {\bfseries copy} () const }\label{classSearchSmallQueue_a060043acfc959d9fc046b99f19518401}
-
+\hyperlink{classSearchBehavior}{Search\-Behavior} $\ast$ \hyperlink{classSearchSmallQueue_a060043acfc959d9fc046b99f19518401}{copy} () const 
 \item 
 \hyperlink{classCashier}{Cashier} \& \hyperlink{classSearchSmallQueue_a0ea1eba216b5f265a10dd59287d56311}{search} (\hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&cashiers) const 
-\begin{DoxyCompactList}\small\item\em Metodo polimorfico para a escolha da melhor fila do caixa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classSearchSmallQueue_a060043acfc959d9fc046b99f19518401}{\index{Search\-Small\-Queue@{Search\-Small\-Queue}!copy@{copy}}
+\index{copy@{copy}!SearchSmallQueue@{Search\-Small\-Queue}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Search\-Behavior} $\ast$ Search\-Small\-Queue\-::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSearchSmallQueue_a060043acfc959d9fc046b99f19518401}
+
+
+Implements \hyperlink{classSearchBehavior_a66f39c53cb1cb9dc029c6fdae55c6234}{Search\-Behavior}.
+
 \hypertarget{classSearchSmallQueue_a0ea1eba216b5f265a10dd59287d56311}{\index{Search\-Small\-Queue@{Search\-Small\-Queue}!search@{search}}
 \index{search@{search}!SearchSmallQueue@{Search\-Small\-Queue}}
 \subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cashier} \& Search\-Small\-Queue\-::search (
 \begin{DoxyParamCaption}
 \item[{{\bf Queue}$<$ {\bf Cashier} $>$ \&}]{cashiers}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSearchSmallQueue_a0ea1eba216b5f265a10dd59287d56311}
-
-
-Metodo polimorfico para a escolha da melhor fila do caixa. 
-
-Existem duas implementaacoes para este metodo. A que escolhe a fila com menos pessoas e a que escolhe a fila com menos produtos.
-
-
-\begin{DoxyParams}{Parameters}
-{\em Vetor} & de caixas de onde sera escolhido uma fila. \\
-\hline
-\end{DoxyParams}
-
-
-Implements \hyperlink{classSearchBehavior_a89f9439f664a750f08a9877710a0fd9f}{Search\-Behavior}.
-
+) const}}\label{classSearchSmallQueue_a0ea1eba216b5f265a10dd59287d56311}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-client/Search\-Small\-Queue.\-h\item 
-client/Search\-Small\-Queue.\-cpp\end{DoxyCompactItemize}
+client/\hyperlink{SearchSmallQueue_8h}{Search\-Small\-Queue.\-h}\item 
+client/\hyperlink{SearchSmallQueue_8cpp}{Search\-Small\-Queue.\-cpp}\end{DoxyCompactItemize}

@@ -1,30 +1,93 @@
 \hypertarget{classGoodProcessment}{\section{Good\-Processment Class Reference}
 \label{classGoodProcessment}\index{Good\-Processment@{Good\-Processment}}
 }
-Inheritance diagram for Good\-Processment\-:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Good\-Processment.\-h$>$}
+
+
+
+Inheritance diagram for Good\-Processment\-:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classGoodProcessment}
+\includegraphics[width=198pt]{classGoodProcessment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Good\-Processment\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classGoodProcessment__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}{\hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ {\bfseries copy} () const }\label{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}
-
-\end{DoxyCompactItemize}
+\hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ \hyperlink{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}{copy} () const 
+\begin{DoxyCompactList}\small\item\em Calcula o tempo de saída do cliente recebido. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}{int {\bfseries cart\-Size\-Factor} ()}\label{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}
-
+int \hyperlink{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}{cart\-Size\-Factor} ()
 \item 
-\hypertarget{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}{int {\bfseries check\-Payment\-Time} ()}\label{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}
-
+int \hyperlink{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}{check\-Payment\-Time} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}{\index{Good\-Processment@{Good\-Processment}!cart\-Size\-Factor@{cart\-Size\-Factor}}
+\index{cart\-Size\-Factor@{cart\-Size\-Factor}!GoodProcessment@{Good\-Processment}}
+\subsubsection[{cart\-Size\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}int Good\-Processment\-::cart\-Size\-Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}
+
+
+Implements \hyperlink{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{Process\-Behavior}.
+
+\hypertarget{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}{\index{Good\-Processment@{Good\-Processment}!check\-Payment\-Time@{check\-Payment\-Time}}
+\index{check\-Payment\-Time@{check\-Payment\-Time}!GoodProcessment@{Good\-Processment}}
+\subsubsection[{check\-Payment\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Good\-Processment\-::check\-Payment\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}
+
+
+Implements \hyperlink{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{Process\-Behavior}.
+
+\hypertarget{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}{\index{Good\-Processment@{Good\-Processment}!copy@{copy}}
+\index{copy@{copy}!GoodProcessment@{Good\-Processment}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process\-Behavior} $\ast$ Good\-Processment\-::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}
+
+
+Calcula o tempo de saída do cliente recebido. 
+
+Esta é a implementação do caixa com processamento bom
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cliente} & que terá seu tempo de saída calculado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O horário que esse cliente sairá do supermercado 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{Process\-Behavior}.
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-cashier/Good\-Processment.\-h\item 
-cashier/Good\-Processment.\-cpp\end{DoxyCompactItemize}
+cashier/\hyperlink{GoodProcessment_8h}{Good\-Processment.\-h}\item 
+cashier/\hyperlink{GoodProcessment_8cpp}{Good\-Processment.\-cpp}\end{DoxyCompactItemize}

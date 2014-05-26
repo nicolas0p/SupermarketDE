@@ -1,0 +1,5 @@
+<map id="ProcessBehavior" name="ProcessBehavior">
+<area shape="rect" id="node2" href="$classBadProcessment.html" title="{BadProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="5,189,163,296"/>
+<area shape="rect" id="node3" href="$classGoodProcessment.html" title="{GoodProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="187,189,344,296"/>
+<area shape="rect" id="node4" href="$classMediumProcessment.html" title="{MediumProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="368,189,525,296"/>
+</map>

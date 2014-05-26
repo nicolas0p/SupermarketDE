@@ -1,0 +1,9 @@
+<map id="makeSupermarket.h" name="makeSupermarket.h">
+<area shape="rect" id="node2" href="$Supermarket_8h.html" title="Supermarket.h" alt="" coords="92,80,199,107"/>
+<area shape="rect" id="node5" href="$Cashier_8h.html" title="cashier/Cashier.h" alt="" coords="183,155,307,181"/>
+<area shape="rect" id="node11" href="$CircularList_8h.html" title="dataStructures/CircularList.h" alt="" coords="341,304,528,331"/>
+<area shape="rect" id="node6" href="$Client_8h.html" title="../client/Client.h" alt="" coords="125,229,240,256"/>
+<area shape="rect" id="node10" href="$ProcessBehavior_8h.html" title="ProcessBehavior.h" alt="" coords="265,229,396,256"/>
+<area shape="rect" id="node7" href="$PaymentType_8h.html" title="PaymentType.h" alt="" coords="5,304,120,331"/>
+<area shape="rect" id="node8" href="$Queue_8h.html" title="../dataStructures/Queue.h" alt="" coords="145,304,316,331"/>
+</map>

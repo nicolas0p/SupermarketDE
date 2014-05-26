@@ -1,0 +1,173 @@
+\hypertarget{classCircularList}{\section{Circular\-List$<$ T $>$ Class Template Reference}
+\label{classCircularList}\index{Circular\-List$<$ T $>$@{Circular\-List$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$Circular\-List.\-h$>$}
+
+
+
+Collaboration diagram for Circular\-List$<$ T $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classCircularList__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef iterator\-\_\-base$<$ T $>$ \hyperlink{classCircularList_afe862594ad46e6d63c779b3dd100d831}{iterator}
+\item 
+typedef iterator\-\_\-base$<$ const T $>$ \hyperlink{classCircularList_a7ecb4e9d89db260f162d1dbb79339d8a}{const\-\_\-iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCircularList_a93439bb2be8aabf75d1dd1d25c5dd973}{Circular\-List} ()
+\item 
+\hyperlink{classCircularList_aa1380278904d609012339df236148118}{Circular\-List} (const \hyperlink{classCircularList}{Circular\-List}$<$ T $>$ \&other)
+\item 
+void \hyperlink{classCircularList_a3e334b3918b202987c3b6f6afdacdfdc}{push\-\_\-back} (const T \&info)
+\item 
+void \hyperlink{classCircularList_a0a2eff26e384e8cc931c2967b1f3d846}{push\-\_\-front} (const T \&dado)
+\item 
+void \hyperlink{classCircularList_ad0677ce8446ff34324d55bc092241697}{push} (int position, const T \&dado)
+\item 
+T \hyperlink{classCircularList_a366abc7bdd1d39f474990635406d69c6}{pop} ()
+\item 
+T \hyperlink{classCircularList_acd9a6c877017764a869e4aa2d665c141}{pop} (int posicao)
+\item 
+T \hyperlink{classCircularList_af434563be90baf3d2848549489a7e7f6}{at} (int position) const 
+\item 
+bool \hyperlink{classCircularList_a7b0a4480af79054afc063bd4b6f11337}{empty} () const 
+\item 
+int \hyperlink{classCircularList_aff385139ba166907428375e6071d5f52}{size} () const 
+\item 
+\hyperlink{classCircularList_afe862594ad46e6d63c779b3dd100d831}{iterator} \hyperlink{classCircularList_a13e9508af90b41ef295abfe4785cb56e}{begin} ()
+\item 
+\hyperlink{classCircularList_afe862594ad46e6d63c779b3dd100d831}{iterator} \hyperlink{classCircularList_a1ea737b63201757b6c4098d03e9d3d55}{end} ()
+\item 
+\hyperlink{classCircularList_a7ecb4e9d89db260f162d1dbb79339d8a}{const\-\_\-iterator} \hyperlink{classCircularList_a5d12ddffe094492ded52a9f9db35a871}{begin} () const 
+\item 
+\hyperlink{classCircularList_a7ecb4e9d89db260f162d1dbb79339d8a}{const\-\_\-iterator} \hyperlink{classCircularList_a82b6631667940d89c6e2ede1c2153d56}{end} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCircularList_a7ecb4e9d89db260f162d1dbb79339d8a}{\index{Circular\-List@{Circular\-List}!const\-\_\-iterator@{const\-\_\-iterator}}
+\index{const\-\_\-iterator@{const\-\_\-iterator}!CircularList@{Circular\-List}}
+\subsubsection[{const\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef iterator\-\_\-base$<$const T$>$ {\bf Circular\-List}$<$ T $>$\-::{\bf const\-\_\-iterator}}}\label{classCircularList_a7ecb4e9d89db260f162d1dbb79339d8a}
+\hypertarget{classCircularList_afe862594ad46e6d63c779b3dd100d831}{\index{Circular\-List@{Circular\-List}!iterator@{iterator}}
+\index{iterator@{iterator}!CircularList@{Circular\-List}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef iterator\-\_\-base$<$T$>$ {\bf Circular\-List}$<$ T $>$\-::{\bf iterator}}}\label{classCircularList_afe862594ad46e6d63c779b3dd100d831}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCircularList_a93439bb2be8aabf75d1dd1d25c5dd973}{\index{Circular\-List@{Circular\-List}!Circular\-List@{Circular\-List}}
+\index{Circular\-List@{Circular\-List}!CircularList@{Circular\-List}}
+\subsubsection[{Circular\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Circular\-List}$<$ T $>$\-::{\bf Circular\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a93439bb2be8aabf75d1dd1d25c5dd973}
+\hypertarget{classCircularList_aa1380278904d609012339df236148118}{\index{Circular\-List@{Circular\-List}!Circular\-List@{Circular\-List}}
+\index{Circular\-List@{Circular\-List}!CircularList@{Circular\-List}}
+\subsubsection[{Circular\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Circular\-List}$<$ T $>$\-::{\bf Circular\-List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Circular\-List}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_aa1380278904d609012339df236148118}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCircularList_af434563be90baf3d2848549489a7e7f6}{\index{Circular\-List@{Circular\-List}!at@{at}}
+\index{at@{at}!CircularList@{Circular\-List}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Circular\-List}$<$ T $>$\-::at (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_af434563be90baf3d2848549489a7e7f6}
+\hypertarget{classCircularList_a13e9508af90b41ef295abfe4785cb56e}{\index{Circular\-List@{Circular\-List}!begin@{begin}}
+\index{begin@{begin}!CircularList@{Circular\-List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf iterator} {\bf Circular\-List}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a13e9508af90b41ef295abfe4785cb56e}
+\hypertarget{classCircularList_a5d12ddffe094492ded52a9f9db35a871}{\index{Circular\-List@{Circular\-List}!begin@{begin}}
+\index{begin@{begin}!CircularList@{Circular\-List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\-\_\-iterator} {\bf Circular\-List}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a5d12ddffe094492ded52a9f9db35a871}
+\hypertarget{classCircularList_a7b0a4480af79054afc063bd4b6f11337}{\index{Circular\-List@{Circular\-List}!empty@{empty}}
+\index{empty@{empty}!CircularList@{Circular\-List}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Circular\-List}$<$ T $>$\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a7b0a4480af79054afc063bd4b6f11337}
+\hypertarget{classCircularList_a1ea737b63201757b6c4098d03e9d3d55}{\index{Circular\-List@{Circular\-List}!end@{end}}
+\index{end@{end}!CircularList@{Circular\-List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf iterator} {\bf Circular\-List}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a1ea737b63201757b6c4098d03e9d3d55}
+\hypertarget{classCircularList_a82b6631667940d89c6e2ede1c2153d56}{\index{Circular\-List@{Circular\-List}!end@{end}}
+\index{end@{end}!CircularList@{Circular\-List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\-\_\-iterator} {\bf Circular\-List}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a82b6631667940d89c6e2ede1c2153d56}
+\hypertarget{classCircularList_a366abc7bdd1d39f474990635406d69c6}{\index{Circular\-List@{Circular\-List}!pop@{pop}}
+\index{pop@{pop}!CircularList@{Circular\-List}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Circular\-List}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a366abc7bdd1d39f474990635406d69c6}
+\hypertarget{classCircularList_acd9a6c877017764a869e4aa2d665c141}{\index{Circular\-List@{Circular\-List}!pop@{pop}}
+\index{pop@{pop}!CircularList@{Circular\-List}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Circular\-List}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{int}]{posicao}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_acd9a6c877017764a869e4aa2d665c141}
+\hypertarget{classCircularList_ad0677ce8446ff34324d55bc092241697}{\index{Circular\-List@{Circular\-List}!push@{push}}
+\index{push@{push}!CircularList@{Circular\-List}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Circular\-List}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{const T \&}]{dado}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_ad0677ce8446ff34324d55bc092241697}
+\hypertarget{classCircularList_a3e334b3918b202987c3b6f6afdacdfdc}{\index{Circular\-List@{Circular\-List}!push\-\_\-back@{push\-\_\-back}}
+\index{push\-\_\-back@{push\-\_\-back}!CircularList@{Circular\-List}}
+\subsubsection[{push\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Circular\-List}$<$ T $>$\-::push\-\_\-back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a3e334b3918b202987c3b6f6afdacdfdc}
+\hypertarget{classCircularList_a0a2eff26e384e8cc931c2967b1f3d846}{\index{Circular\-List@{Circular\-List}!push\-\_\-front@{push\-\_\-front}}
+\index{push\-\_\-front@{push\-\_\-front}!CircularList@{Circular\-List}}
+\subsubsection[{push\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Circular\-List}$<$ T $>$\-::push\-\_\-front (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{dado}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_a0a2eff26e384e8cc931c2967b1f3d846}
+\hypertarget{classCircularList_aff385139ba166907428375e6071d5f52}{\index{Circular\-List@{Circular\-List}!size@{size}}
+\index{size@{size}!CircularList@{Circular\-List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Circular\-List}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCircularList_aff385139ba166907428375e6071d5f52}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+data\-Structures/\hyperlink{CircularList_8h}{Circular\-List.\-h}\end{DoxyCompactItemize}

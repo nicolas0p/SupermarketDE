@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,15 +88,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Supermarket Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Supermarket_8h_source.html">Supermarket.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Supermarket:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSupermarket__coll__graph.png" border="0" usemap="#Supermarket_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d3d0ed8426d0f3d0be3424ba9f34ba7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3d0ed8426d0f3d0be3424ba9f34ba7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Supermarket</b> (const std::string &amp;, const <a class="el" href="classQueue.html">Queue</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize)</td></tr>
+<tr class="memitem:a4d3d0ed8426d0f3d0be3424ba9f34ba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#a4d3d0ed8426d0f3d0be3424ba9f34ba7">Supermarket</a> (const std::string &amp;, const <a class="el" href="classQueue.html">Queue</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;, int averageTimeNewClients, int totalRuntimeHours, int maxQueueSize)</td></tr>
 <tr class="separator:a4d3d0ed8426d0f3d0be3424ba9f34ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2807840b2e04b8988f359d9e34960ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2807840b2e04b8988f359d9e34960ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#af2807840b2e04b8988f359d9e34960ea">run</a> ()</td></tr>
-<tr class="memdesc:af2807840b2e04b8988f359d9e34960ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao <br/></td></tr>
+<tr class="memitem:a6140b300fddafd73ab29cf823baf5951"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#a6140b300fddafd73ab29cf823baf5951">~Supermarket</a> ()</td></tr>
+<tr class="separator:a6140b300fddafd73ab29cf823baf5951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2807840b2e04b8988f359d9e34960ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#af2807840b2e04b8988f359d9e34960ea">run</a> ()</td></tr>
+<tr class="memdesc:af2807840b2e04b8988f359d9e34960ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao  <a href="#af2807840b2e04b8988f359d9e34960ea">More...</a><br/></td></tr>
 <tr class="separator:af2807840b2e04b8988f359d9e34960ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb0363d56004ae5f42863d00bb952da"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#a3cb0363d56004ae5f42863d00bb952da">incomeOfCashiers</a> () const </td></tr>
 <tr class="memdesc:a3cb0363d56004ae5f42863d00bb952da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria texto que representa o total de dinheiro que aquele caixa recebeu de seus clientes.  <a href="#a3cb0363d56004ae5f42863d00bb952da">More...</a><br/></td></tr>
@@ -113,16 +120,84 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aa4ee29cd9ef76a00622dcc9afd409efd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#aa4ee29cd9ef76a00622dcc9afd409efd">averageWaitingTime</a> () const </td></tr>
 <tr class="memdesc:aa4ee29cd9ef76a00622dcc9afd409efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o tempo medio de espera por cliente.  <a href="#aa4ee29cd9ef76a00622dcc9afd409efd">More...</a><br/></td></tr>
 <tr class="separator:aa4ee29cd9ef76a00622dcc9afd409efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad1cbadfc661d7097aa8e45b43a6de3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad1cbadfc661d7097aa8e45b43a6de3c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> () const </td></tr>
+<tr class="memitem:aad1cbadfc661d7097aa8e45b43a6de3c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#aad1cbadfc661d7097aa8e45b43a6de3c">name</a> () const </td></tr>
+<tr class="memdesc:aad1cbadfc661d7097aa8e45b43a6de3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome do supermercado.  <a href="#aad1cbadfc661d7097aa8e45b43a6de3c">More...</a><br/></td></tr>
 <tr class="separator:aad1cbadfc661d7097aa8e45b43a6de3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6a5e90ac46538a43854c562d75e763a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6a5e90ac46538a43854c562d75e763a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>lostClients</b> () const </td></tr>
+<tr class="memitem:af6a5e90ac46538a43854c562d75e763a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#af6a5e90ac46538a43854c562d75e763a">lostClients</a> () const </td></tr>
+<tr class="memdesc:af6a5e90ac46538a43854c562d75e763a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o numero de clientes perdidos.  <a href="#af6a5e90ac46538a43854c562d75e763a">More...</a><br/></td></tr>
 <tr class="separator:af6a5e90ac46538a43854c562d75e763a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d1badd6c3efe2dfa719e02a644051f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19d1badd6c3efe2dfa719e02a644051f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>lostIncome</b> () const </td></tr>
+<tr class="memitem:a19d1badd6c3efe2dfa719e02a644051f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupermarket.html#a19d1badd6c3efe2dfa719e02a644051f">lostIncome</a> () const </td></tr>
+<tr class="memdesc:a19d1badd6c3efe2dfa719e02a644051f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o faturamento perdido total.  <a href="#a19d1badd6c3efe2dfa719e02a644051f">More...</a><br/></td></tr>
 <tr class="separator:a19d1badd6c3efe2dfa719e02a644051f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4d3d0ed8426d0f3d0be3424ba9f34ba7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Supermarket::Supermarket </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classQueue.html">Queue</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cashiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>averageTimeNewClients</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalRuntimeHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxQueueSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6140b300fddafd73ab29cf823baf5951"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Supermarket::~Supermarket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ab66a7fa61f23cc679011305fa2b5688f"></a>
 <div class="memitem">
@@ -179,6 +254,57 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lostIncome</b> () c
 
 </div>
 </div>
+<a class="anchor" id="af6a5e90ac46538a43854c562d75e763a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Supermarket::lostClients </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o numero de clientes perdidos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a19d1badd6c3efe2dfa719e02a644051f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Supermarket::lostIncome </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o faturamento perdido total. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad1cbadfc661d7097aa8e45b43a6de3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Supermarket::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o nome do supermercado. </p>
+
+</div>
+</div>
 <a class="anchor" id="a2e35d76f55bf6b5669b5101a2d7ebc93"></a>
 <div class="memitem">
 <div class="memproto">
@@ -195,6 +321,23 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lostIncome</b> () c
 <p>Cria texto que representa o lucro do caixa no mes. </p>
 <p>lucro do caixa = salarioDoCaixa * tempoDeTrabalho / mes</p>
 <dl class="section return"><dt>Returns</dt><dd>String com nome do caixa + lucro do caixa </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af2807840b2e04b8988f359d9e34960ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Supermarket::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao </p>
 
 </div>
 </div>
@@ -218,7 +361,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lostIncome</b> () c
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Supermarket_8h_source.html">Supermarket.h</a></li>
-<li>Supermarket.cpp</li>
+<li><a class="el" href="Supermarket_8cpp.html">Supermarket.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

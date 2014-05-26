@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,37 +89,138 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ProcessBehavior Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ProcessBehavior_8h_source.html">ProcessBehavior.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ProcessBehavior:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classProcessBehavior.png" usemap="#ProcessBehavior_map" alt=""/>
-  <map id="ProcessBehavior_map" name="ProcessBehavior_map">
-<area href="classBadProcessment.html" alt="BadProcessment" shape="rect" coords="0,56,128,80"/>
-<area href="classGoodProcessment.html" alt="GoodProcessment" shape="rect" coords="138,56,266,80"/>
-<area href="classMediumProcessment.html" alt="MediumProcessment" shape="rect" coords="276,56,404,80"/>
-</map>
- </div></div>
+<div class="center"><img src="classProcessBehavior__inherit__graph.png" border="0" usemap="#ProcessBehavior_inherit__map" alt="Inheritance graph"/></div>
+<map name="ProcessBehavior_inherit__map" id="ProcessBehavior_inherit__map">
+<area shape="rect" id="node2" href="classBadProcessment.html" title="{BadProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="5,189,163,296"/><area shape="rect" id="node3" href="classGoodProcessment.html" title="{GoodProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="187,189,344,296"/><area shape="rect" id="node4" href="classMediumProcessment.html" title="{MediumProcessment\n||+ copy()\l# cartSizeFactor()\l# checkPaymentTime()\l}" alt="" coords="368,189,525,296"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ProcessBehavior:</div>
+<div class="dyncontent">
+<div class="center"><img src="classProcessBehavior__coll__graph.png" border="0" usemap="#ProcessBehavior_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:acd6a6ace48909139c252358d67dc94ea"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessBehavior.html#acd6a6ace48909139c252358d67dc94ea">~ProcessBehavior</a> ()</td></tr>
+<tr class="separator:acd6a6ace48909139c252358d67dc94ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17faac1683e9da239d33026db1fd11f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessBehavior.html#a17faac1683e9da239d33026db1fd11f8">processTime</a> (const <a class="el" href="classClient.html">Client</a> &amp;client)</td></tr>
 <tr class="memdesc:a17faac1683e9da239d33026db1fd11f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o tempo de saída do cliente recebido.  <a href="#a17faac1683e9da239d33026db1fd11f8">More...</a><br/></td></tr>
 <tr class="separator:a17faac1683e9da239d33026db1fd11f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec2ad87efbdc778a93c7e692c97878e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afec2ad87efbdc778a93c7e692c97878e"></a>
-virtual <a class="el" href="classProcessBehavior.html">ProcessBehavior</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> () const =0</td></tr>
+<tr class="memitem:afec2ad87efbdc778a93c7e692c97878e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classProcessBehavior.html">ProcessBehavior</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessBehavior.html#afec2ad87efbdc778a93c7e692c97878e">copy</a> () const =0</td></tr>
 <tr class="separator:afec2ad87efbdc778a93c7e692c97878e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7ccbf0f5499819a6f6c524bfd8595921"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ccbf0f5499819a6f6c524bfd8595921"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>cartSizeFactor</b> ()=0</td></tr>
+<tr class="memitem:a7ccbf0f5499819a6f6c524bfd8595921"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessBehavior.html#a7ccbf0f5499819a6f6c524bfd8595921">cartSizeFactor</a> ()=0</td></tr>
 <tr class="separator:a7ccbf0f5499819a6f6c524bfd8595921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e63322c133f11387759d34dd8fb13c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3e63322c133f11387759d34dd8fb13c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>checkPaymentTime</b> ()=0</td></tr>
+<tr class="memitem:ac3e63322c133f11387759d34dd8fb13c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessBehavior.html#ac3e63322c133f11387759d34dd8fb13c">checkPaymentTime</a> ()=0</td></tr>
 <tr class="separator:ac3e63322c133f11387759d34dd8fb13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acd6a6ace48909139c252358d67dc94ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ProcessBehavior::~ProcessBehavior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7ccbf0f5499819a6f6c524bfd8595921"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProcessBehavior::cartSizeFactor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classBadProcessment.html#a921c2f0f7fa59d0f92a35ddc440eeffb">BadProcessment</a>, <a class="el" href="classGoodProcessment.html#a99170ba3993e1511cc1fa82aba883bbc">GoodProcessment</a>, and <a class="el" href="classMediumProcessment.html#a8baac43e0224353f4c5340c5e7117b62">MediumProcessment</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3e63322c133f11387759d34dd8fb13c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProcessBehavior::checkPaymentTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classBadProcessment.html#aba28469024834d364c3d599436732204">BadProcessment</a>, <a class="el" href="classGoodProcessment.html#a126bda449e47094c49f501dcb0cb5d88">GoodProcessment</a>, and <a class="el" href="classMediumProcessment.html#ab14abd8ec6b6a7af6aa2879c471dded7">MediumProcessment</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afec2ad87efbdc778a93c7e692c97878e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classProcessBehavior.html">ProcessBehavior</a>* ProcessBehavior::copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classBadProcessment.html#a682870ce18151f42f864fd22ab61363f">BadProcessment</a>, <a class="el" href="classGoodProcessment.html#a1c2dfca6ae6c4ab034dfcfc423bf338b">GoodProcessment</a>, and <a class="el" href="classMediumProcessment.html#a8207750eb9bf65f830770b3631845934">MediumProcessment</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a17faac1683e9da239d33026db1fd11f8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +249,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>checkPaymentTi
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>cashier/<a class="el" href="ProcessBehavior_8h_source.html">ProcessBehavior.h</a></li>
-<li>cashier/ProcessBehavior.cpp</li>
+<li>cashier/<a class="el" href="ProcessBehavior_8cpp.html">ProcessBehavior.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,47 +89,187 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Client Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Client_8h_source.html">Client.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Client:</div>
+<div class="dyncontent">
+<div class="center"><img src="classClient__coll__graph.png" border="0" usemap="#Client_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3b5a8f683ebd0abdf91b8cfe4c8be817"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5a8f683ebd0abdf91b8cfe4c8be817"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b> (const <a class="el" href="classSearchBehavior.html">SearchBehavior</a> &amp;searchBehavior, PaymentType paymentType, int timeOfArrival, int cartSize, double cartValue)</td></tr>
+<tr class="memitem:a3b5a8f683ebd0abdf91b8cfe4c8be817"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a3b5a8f683ebd0abdf91b8cfe4c8be817">Client</a> (const <a class="el" href="classSearchBehavior.html">SearchBehavior</a> &amp;searchBehavior, <a class="el" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a> <a class="el" href="classClient.html#a9cceb950fc9c53ea35bcddf6214e4e4f">paymentType</a>, int <a class="el" href="classClient.html#af327f525b4cf7838d97c095c8dd00e60">timeOfArrival</a>, int <a class="el" href="classClient.html#a2ef5728c74cc7f9dfce8b5e9e950427c">cartSize</a>, double <a class="el" href="classClient.html#a52b9e8ce7f11c440fb532f6056db5fe2">cartValue</a>)</td></tr>
 <tr class="separator:a3b5a8f683ebd0abdf91b8cfe4c8be817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8e3b9fdfa24b7586bcf24537b89b67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d8e3b9fdfa24b7586bcf24537b89b67"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b> (const <a class="el" href="classClient.html">Client</a> &amp;other)</td></tr>
+<tr class="memitem:a4d8e3b9fdfa24b7586bcf24537b89b67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a4d8e3b9fdfa24b7586bcf24537b89b67">Client</a> (const <a class="el" href="classClient.html">Client</a> &amp;other)</td></tr>
 <tr class="separator:a4d8e3b9fdfa24b7586bcf24537b89b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc35776f6a75d2fb8d4abfb3cc33f8a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc35776f6a75d2fb8d4abfb3cc33f8a3"></a>
-<a class="el" href="classClient.html">Client</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classClient.html">Client</a> other)</td></tr>
+<tr class="memitem:acc35776f6a75d2fb8d4abfb3cc33f8a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classClient.html">Client</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#acc35776f6a75d2fb8d4abfb3cc33f8a3">operator=</a> (<a class="el" href="classClient.html">Client</a> other)</td></tr>
 <tr class="separator:acc35776f6a75d2fb8d4abfb3cc33f8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ef5728c74cc7f9dfce8b5e9e950427c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ef5728c74cc7f9dfce8b5e9e950427c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cartSize</b> () const </td></tr>
+<tr class="memitem:a840e519ca781888cbd54181572ebe3a7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a840e519ca781888cbd54181572ebe3a7">~Client</a> ()</td></tr>
+<tr class="separator:a840e519ca781888cbd54181572ebe3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef5728c74cc7f9dfce8b5e9e950427c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a2ef5728c74cc7f9dfce8b5e9e950427c">cartSize</a> () const </td></tr>
+<tr class="memdesc:a2ef5728c74cc7f9dfce8b5e9e950427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o numero de itens dentro do carrinho do cliente.  <a href="#a2ef5728c74cc7f9dfce8b5e9e950427c">More...</a><br/></td></tr>
 <tr class="separator:a2ef5728c74cc7f9dfce8b5e9e950427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52b9e8ce7f11c440fb532f6056db5fe2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52b9e8ce7f11c440fb532f6056db5fe2"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>cartValue</b> () const </td></tr>
+<tr class="memitem:a52b9e8ce7f11c440fb532f6056db5fe2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a52b9e8ce7f11c440fb532f6056db5fe2">cartValue</a> () const </td></tr>
+<tr class="memdesc:a52b9e8ce7f11c440fb532f6056db5fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor total dos itens no carrinho.  <a href="#a52b9e8ce7f11c440fb532f6056db5fe2">More...</a><br/></td></tr>
 <tr class="separator:a52b9e8ce7f11c440fb532f6056db5fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cceb950fc9c53ea35bcddf6214e4e4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cceb950fc9c53ea35bcddf6214e4e4f"></a>
-PaymentType&#160;</td><td class="memItemRight" valign="bottom"><b>paymentType</b> () const </td></tr>
+<tr class="memitem:a9cceb950fc9c53ea35bcddf6214e4e4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a9cceb950fc9c53ea35bcddf6214e4e4f">paymentType</a> () const </td></tr>
+<tr class="memdesc:a9cceb950fc9c53ea35bcddf6214e4e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro.  <a href="#a9cceb950fc9c53ea35bcddf6214e4e4f">More...</a><br/></td></tr>
 <tr class="separator:a9cceb950fc9c53ea35bcddf6214e4e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae56c063a8bc1c57e9c47ad88b1770994"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae56c063a8bc1c57e9c47ad88b1770994"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>timeOfDeparture</b> () const </td></tr>
+<tr class="memitem:ae56c063a8bc1c57e9c47ad88b1770994"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ae56c063a8bc1c57e9c47ad88b1770994">timeOfDeparture</a> () const </td></tr>
+<tr class="memdesc:ae56c063a8bc1c57e9c47ad88b1770994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tempo de saida do cliente.  <a href="#ae56c063a8bc1c57e9c47ad88b1770994">More...</a><br/></td></tr>
 <tr class="separator:ae56c063a8bc1c57e9c47ad88b1770994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af327f525b4cf7838d97c095c8dd00e60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af327f525b4cf7838d97c095c8dd00e60"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>timeOfArrival</b> () const </td></tr>
+<tr class="memitem:af327f525b4cf7838d97c095c8dd00e60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#af327f525b4cf7838d97c095c8dd00e60">timeOfArrival</a> () const </td></tr>
+<tr class="memdesc:af327f525b4cf7838d97c095c8dd00e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tempo de chegada do cliente.  <a href="#af327f525b4cf7838d97c095c8dd00e60">More...</a><br/></td></tr>
 <tr class="separator:af327f525b4cf7838d97c095c8dd00e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a282e19d2e25da6d8ee8a5c8ad5f0bdd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a282e19d2e25da6d8ee8a5c8ad5f0bdd7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>timeOfDeparture</b> (int timeOfDeparture)</td></tr>
+<tr class="memitem:a282e19d2e25da6d8ee8a5c8ad5f0bdd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a282e19d2e25da6d8ee8a5c8ad5f0bdd7">timeOfDeparture</a> (int timeOfDeparture)</td></tr>
+<tr class="memdesc:a282e19d2e25da6d8ee8a5c8ad5f0bdd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iguala o tempo de saida recebido com o atributo tempo de saida.  <a href="#a282e19d2e25da6d8ee8a5c8ad5f0bdd7">More...</a><br/></td></tr>
 <tr class="separator:a282e19d2e25da6d8ee8a5c8ad5f0bdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692860756fa31e443b61d5a897f0f46b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a692860756fa31e443b61d5a897f0f46b">chooseCashier</a> (<a class="el" href="classQueue.html">Queue</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;cashiers)</td></tr>
 <tr class="memdesc:a692860756fa31e443b61d5a897f0f46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente.  <a href="#a692860756fa31e443b61d5a897f0f46b">More...</a><br/></td></tr>
 <tr class="separator:a692860756fa31e443b61d5a897f0f46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51af7aa6b8f591496a8f6a4a87a14bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ae51af7aa6b8f591496a8f6a4a87a14bf">Client</a> ()</td></tr>
+<tr class="separator:ae51af7aa6b8f591496a8f6a4a87a14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a359e644998b9e1c2adf9d9afe3e04d8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a359e644998b9e1c2adf9d9afe3e04d8c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classClient.html">Client</a> &amp;first, <a class="el" href="classClient.html">Client</a> &amp;second)</td></tr>
+<tr class="memitem:a359e644998b9e1c2adf9d9afe3e04d8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a359e644998b9e1c2adf9d9afe3e04d8c">swap</a> (<a class="el" href="classClient.html">Client</a> &amp;first, <a class="el" href="classClient.html">Client</a> &amp;second)</td></tr>
 <tr class="separator:a359e644998b9e1c2adf9d9afe3e04d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3b5a8f683ebd0abdf91b8cfe4c8be817"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Client::Client </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSearchBehavior.html">SearchBehavior</a> &amp;&#160;</td>
+          <td class="paramname"><em>searchBehavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a>&#160;</td>
+          <td class="paramname"><em>paymentType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeOfArrival</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cartSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cartValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4d8e3b9fdfa24b7586bcf24537b89b67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Client::Client </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classClient.html">Client</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a840e519ca781888cbd54181572ebe3a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Client::~Client </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae51af7aa6b8f591496a8f6a4a87a14bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Client::Client </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2ef5728c74cc7f9dfce8b5e9e950427c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Client::cartSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o numero de itens dentro do carrinho do cliente. </p>
+
+</div>
+</div>
+<a class="anchor" id="a52b9e8ce7f11c440fb532f6056db5fe2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Client::cartValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o valor total dos itens no carrinho. </p>
+
+</div>
+</div>
 <a class="anchor" id="a692860756fa31e443b61d5a897f0f46b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,9 +294,129 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="e
 
 </div>
 </div>
+<a class="anchor" id="acc35776f6a75d2fb8d4abfb3cc33f8a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classClient.html">Client</a> &amp; Client::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classClient.html">Client</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9cceb950fc9c53ea35bcddf6214e4e4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a> Client::paymentType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro. </p>
+
+</div>
+</div>
+<a class="anchor" id="af327f525b4cf7838d97c095c8dd00e60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Client::timeOfArrival </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tempo de chegada do cliente. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae56c063a8bc1c57e9c47ad88b1770994"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Client::timeOfDeparture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tempo de saida do cliente. </p>
+
+</div>
+</div>
+<a class="anchor" id="a282e19d2e25da6d8ee8a5c8ad5f0bdd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Client::timeOfDeparture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeOfDeparture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iguala o tempo de saida recebido com o atributo tempo de saida. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a359e644998b9e1c2adf9d9afe3e04d8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classClient.html">Client</a> &amp;&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classClient.html">Client</a> &amp;&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>client/<a class="el" href="Client_8h_source.html">Client.h</a></li>
-<li>client/Client.cpp</li>
+<li>client/<a class="el" href="Client_8cpp.html">Client.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

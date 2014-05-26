@@ -14,7 +14,7 @@
 class SearchBehavior {
 public:
 	virtual ~SearchBehavior() {}
-	virtual SearchBehavior* copy() const = 0; //para poder criar o Client com (SearchLessItens(), blablabla)
+	virtual SearchBehavior* copy() const = 0;
 	/**
 	 * @brief Metodo polimorfico para a escolha da melhor fila do caixa.
 	 *
@@ -23,7 +23,7 @@ public:
 	 *
 	 * @param Vetor de caixas de onde sera escolhido uma fila.
 	 */
-	virtual Cashier &search(Queue<Cashier> &cashiers) const = 0;
+	virtual Cashier &search(CircularList<Cashier> &cashiers) const = 0;
 };
 
 #endif /* SEARCHBEHAVIOR_H_ */

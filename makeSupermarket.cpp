@@ -20,6 +20,9 @@
 
 using namespace std;
 
+/**
+ * @brief Cria um supermercado de acordo com as informacoes obtidas pelo console
+ */
 Supermarket makeSupermarketConsole() {
 	string input;
 	string nomeSupermercado;
@@ -101,6 +104,9 @@ Supermarket makeSupermarketConsole() {
 	return Supermarket(nomeSupermercado, cashiers, tempoMedioNovosClientes, tempoSimulacao, tamanhoMaxFila);
 }
 
+/**
+ * @brief Cria um supermercado a partir das informacoes obtidas do arquivo config.txt
+ */
 Supermarket makeSupermarketFile() {
 	cout << "hey you";
 	string SupermarketName;

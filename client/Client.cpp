@@ -53,26 +53,44 @@ Client::~Client() {
 	delete _searchBehavior;
 }
 
+/**
+ * @brief Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro
+ */
 PaymentType Client::paymentType() const {
 	return _paymentType;
 }
 
+/**
+ * @brief Iguala o tempo de saida recebido com o atributo tempo de saida
+ */
 void Client::timeOfDeparture(int timeOfDeparture) {
 	_timeOfDeparture = timeOfDeparture;
 }
 
+/**
+ * @brief Retorna o tempo de saida do cliente
+ */
 int Client::timeOfDeparture() const {
 	return _timeOfDeparture;
 }
 
+/**
+ * @brief Retorna o tempo de chegada do cliente
+ */
 int Client::timeOfArrival() const {
 	return _timeOfArrival;
 }
 
+/**
+ * @brief Retorna o numero de itens dentro do carrinho do cliente
+ */
 int Client::cartSize() const {
 	return _cartSize;
 }
 
+/**
+ * @brief Retorna o valor total dos itens no carrinho
+ */
 double Client::cartValue() const {
 	return _cartValue;
 }

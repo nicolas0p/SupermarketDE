@@ -1,58 +1,96 @@
 \hypertarget{classCashier}{\section{Cashier Class Reference}
 \label{classCashier}\index{Cashier@{Cashier}}
 }
+
+
+{\ttfamily \#include $<$Cashier.\-h$>$}
+
+
+
+Collaboration diagram for Cashier\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classCashier__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCashier_ae0b9b991bed233e91d802ed24a1689a0}{{\bfseries Cashier} (std\-::string id, double salary, const \hyperlink{classProcessBehavior}{Process\-Behavior} \&process\-Behavior, int time\-Of\-Arrival, bool over\-Time)}\label{classCashier_ae0b9b991bed233e91d802ed24a1689a0}
-
+\hyperlink{classCashier_ae0b9b991bed233e91d802ed24a1689a0}{Cashier} (std\-::string \hyperlink{classCashier_a5c32d6426d9e272649151a965564afb1}{id}, double \hyperlink{classCashier_ad394576caf7eb468ce5684181b53c83f}{salary}, const \hyperlink{classProcessBehavior}{Process\-Behavior} \&process\-Behavior, int \hyperlink{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}{time\-Of\-Arrival}, bool \hyperlink{classCashier_a61d85cd680cc3611c5e9fa6d12544236}{over\-Time})
 \item 
-\hypertarget{classCashier_aa3438cc7699379f97fb86204cee96f3b}{{\bfseries Cashier} (const \hyperlink{classCashier}{Cashier} \&other)}\label{classCashier_aa3438cc7699379f97fb86204cee96f3b}
-
+\hyperlink{classCashier_aa3438cc7699379f97fb86204cee96f3b}{Cashier} (const \hyperlink{classCashier}{Cashier} \&other)
 \item 
-\hypertarget{classCashier_ae50bc394e4ac4ee80817aff2b8ecd846}{\hyperlink{classCashier}{Cashier} \& {\bfseries operator=} (\hyperlink{classCashier}{Cashier} other)}\label{classCashier_ae50bc394e4ac4ee80817aff2b8ecd846}
-
+\hyperlink{classCashier}{Cashier} \& \hyperlink{classCashier_ae50bc394e4ac4ee80817aff2b8ecd846}{operator=} (\hyperlink{classCashier}{Cashier} other)
+\item 
+\hyperlink{classCashier_af69977426e869d157423fe6d0d4d08ac}{$\sim$\-Cashier} ()
 \item 
 void \hyperlink{classCashier_a8a0e504ffb0178331eac83900182de06}{add\-Client} (\hyperlink{classClient}{Client} \&client)
 \begin{DoxyCompactList}\small\item\em Adiciona um cliente a fila de clientes. \end{DoxyCompactList}\item 
 void \hyperlink{classCashier_ae84eef690ba7beb9c38e1813bf4a4934}{update} (int current\-Time)
 \begin{DoxyCompactList}\small\item\em Retira clientes que devem sair da fila no horário especificado. \end{DoxyCompactList}\item 
-\hypertarget{classCashier_a21fec12d0be5f4ae5f530ff0ee0d6c6e}{double {\bfseries total\-Income} () const }\label{classCashier_a21fec12d0be5f4ae5f530ff0ee0d6c6e}
-
-\item 
-\hypertarget{classCashier_aef70a7f98c9049e74830abdc3ef16e48}{double {\bfseries average\-Income} () const }\label{classCashier_aef70a7f98c9049e74830abdc3ef16e48}
-
-\item 
-\hypertarget{classCashier_af627f5b03558df68531aa86e4eced5a2}{int {\bfseries total\-Waiting\-Time} () const }\label{classCashier_af627f5b03558df68531aa86e4eced5a2}
-
-\item 
-\hypertarget{classCashier_ae6d59b96dd0a97414a883056487f9934}{int {\bfseries clients\-Served} () const }\label{classCashier_ae6d59b96dd0a97414a883056487f9934}
-
-\item 
-\hypertarget{classCashier_a6c4e3d00ebeb1e9af88feb6ff2285369}{int {\bfseries queue\-Size} () const }\label{classCashier_a6c4e3d00ebeb1e9af88feb6ff2285369}
-
-\item 
-\hypertarget{classCashier_a20019398d52b20997fa109228268b583}{int {\bfseries num\-Of\-Items} () const }\label{classCashier_a20019398d52b20997fa109228268b583}
-
-\item 
-\hypertarget{classCashier_a5c32d6426d9e272649151a965564afb1}{std\-::string {\bfseries id} () const }\label{classCashier_a5c32d6426d9e272649151a965564afb1}
-
-\item 
-\hypertarget{classCashier_ad394576caf7eb468ce5684181b53c83f}{double {\bfseries salary} () const }\label{classCashier_ad394576caf7eb468ce5684181b53c83f}
-
-\item 
-\hypertarget{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}{int {\bfseries time\-Of\-Arrival} () const }\label{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}
-
-\item 
-\hypertarget{classCashier_a61d85cd680cc3611c5e9fa6d12544236}{bool {\bfseries over\-Time} () const }\label{classCashier_a61d85cd680cc3611c5e9fa6d12544236}
-
+double \hyperlink{classCashier_a21fec12d0be5f4ae5f530ff0ee0d6c6e}{total\-Income} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o total da entrada de dinheiro neste caixa. \end{DoxyCompactList}\item 
+double \hyperlink{classCashier_aef70a7f98c9049e74830abdc3ef16e48}{average\-Income} () const 
+\begin{DoxyCompactList}\small\item\em Retorna a media de entrada de dinheiro deste caixa. \end{DoxyCompactList}\item 
+int \hyperlink{classCashier_af627f5b03558df68531aa86e4eced5a2}{total\-Waiting\-Time} () const 
+\begin{DoxyCompactList}\small\item\em Retorna a soma do tempo de espera de todos os clientes atendidos por este caixa. \end{DoxyCompactList}\item 
+int \hyperlink{classCashier_ae6d59b96dd0a97414a883056487f9934}{clients\-Served} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o total de clientes servidos. \end{DoxyCompactList}\item 
+int \hyperlink{classCashier_a6c4e3d00ebeb1e9af88feb6ff2285369}{queue\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o numero de clientes na fila no momento. \end{DoxyCompactList}\item 
+int \hyperlink{classCashier_a20019398d52b20997fa109228268b583}{num\-Of\-Items} () const 
+\begin{DoxyCompactList}\small\item\em Retorna a soma do número de itens de todos os clientes na fila. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classCashier_a5c32d6426d9e272649151a965564afb1}{id} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o id do caixa. \end{DoxyCompactList}\item 
+double \hyperlink{classCashier_ad394576caf7eb468ce5684181b53c83f}{salary} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o salario do caixa. \end{DoxyCompactList}\item 
+int \hyperlink{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}{time\-Of\-Arrival} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o horario de chegada do caixa. \end{DoxyCompactList}\item 
+bool \hyperlink{classCashier_a61d85cd680cc3611c5e9fa6d12544236}{over\-Time} () const 
+\begin{DoxyCompactList}\small\item\em Retorna se o caixa esta trabalhando hora extra ou nao. \end{DoxyCompactList}\item 
+\hyperlink{classCashier_a9dd99a4a5f4c5295aaa4584b21e30aec}{Cashier} ()
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCashier_a34bcc8f6f2057300c0eba451506915d1}{void {\bfseries swap} (\hyperlink{classCashier}{Cashier} \&first, \hyperlink{classCashier}{Cashier} \&second)}\label{classCashier_a34bcc8f6f2057300c0eba451506915d1}
-
+void \hyperlink{classCashier_a34bcc8f6f2057300c0eba451506915d1}{swap} (\hyperlink{classCashier}{Cashier} \&first, \hyperlink{classCashier}{Cashier} \&second)
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCashier_ae0b9b991bed233e91d802ed24a1689a0}{\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\subsubsection[{Cashier}]{\setlength{\rightskip}{0pt plus 5cm}Cashier\-::\-Cashier (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{id, }
+\item[{double}]{salary, }
+\item[{const {\bf Process\-Behavior} \&}]{process\-Behavior, }
+\item[{int}]{time\-Of\-Arrival, }
+\item[{bool}]{over\-Time}
+\end{DoxyParamCaption}
+)}}\label{classCashier_ae0b9b991bed233e91d802ed24a1689a0}
+\hypertarget{classCashier_aa3438cc7699379f97fb86204cee96f3b}{\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\subsubsection[{Cashier}]{\setlength{\rightskip}{0pt plus 5cm}Cashier\-::\-Cashier (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cashier} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classCashier_aa3438cc7699379f97fb86204cee96f3b}
+\hypertarget{classCashier_af69977426e869d157423fe6d0d4d08ac}{\index{Cashier@{Cashier}!$\sim$\-Cashier@{$\sim$\-Cashier}}
+\index{$\sim$\-Cashier@{$\sim$\-Cashier}!Cashier@{Cashier}}
+\subsubsection[{$\sim$\-Cashier}]{\setlength{\rightskip}{0pt plus 5cm}Cashier\-::$\sim$\-Cashier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCashier_af69977426e869d157423fe6d0d4d08ac}
+\hypertarget{classCashier_a9dd99a4a5f4c5295aaa4584b21e30aec}{\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\subsubsection[{Cashier}]{\setlength{\rightskip}{0pt plus 5cm}Cashier\-::\-Cashier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCashier_a9dd99a4a5f4c5295aaa4584b21e30aec}
 
 
 \subsection{Member Function Documentation}
@@ -72,6 +110,123 @@ Adiciona um cliente a fila de clientes.
 {\em Cliente} & a ser adicionado \\
 \hline
 \end{DoxyParams}
+\hypertarget{classCashier_aef70a7f98c9049e74830abdc3ef16e48}{\index{Cashier@{Cashier}!average\-Income@{average\-Income}}
+\index{average\-Income@{average\-Income}!Cashier@{Cashier}}
+\subsubsection[{average\-Income}]{\setlength{\rightskip}{0pt plus 5cm}double Cashier\-::average\-Income (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_aef70a7f98c9049e74830abdc3ef16e48}
+
+
+Retorna a media de entrada de dinheiro deste caixa. 
+
+A media e calculada dividindo o total de entrada pelos clientes servidos \hypertarget{classCashier_ae6d59b96dd0a97414a883056487f9934}{\index{Cashier@{Cashier}!clients\-Served@{clients\-Served}}
+\index{clients\-Served@{clients\-Served}!Cashier@{Cashier}}
+\subsubsection[{clients\-Served}]{\setlength{\rightskip}{0pt plus 5cm}int Cashier\-::clients\-Served (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_ae6d59b96dd0a97414a883056487f9934}
+
+
+Retorna o total de clientes servidos. 
+
+\hypertarget{classCashier_a5c32d6426d9e272649151a965564afb1}{\index{Cashier@{Cashier}!id@{id}}
+\index{id@{id}!Cashier@{Cashier}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Cashier\-::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_a5c32d6426d9e272649151a965564afb1}
+
+
+Retorna o id do caixa. 
+
+\hypertarget{classCashier_a20019398d52b20997fa109228268b583}{\index{Cashier@{Cashier}!num\-Of\-Items@{num\-Of\-Items}}
+\index{num\-Of\-Items@{num\-Of\-Items}!Cashier@{Cashier}}
+\subsubsection[{num\-Of\-Items}]{\setlength{\rightskip}{0pt plus 5cm}int Cashier\-::num\-Of\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_a20019398d52b20997fa109228268b583}
+
+
+Retorna a soma do número de itens de todos os clientes na fila. 
+
+\hypertarget{classCashier_ae50bc394e4ac4ee80817aff2b8ecd846}{\index{Cashier@{Cashier}!operator=@{operator=}}
+\index{operator=@{operator=}!Cashier@{Cashier}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cashier} \& Cashier\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Cashier}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classCashier_ae50bc394e4ac4ee80817aff2b8ecd846}
+\hypertarget{classCashier_a61d85cd680cc3611c5e9fa6d12544236}{\index{Cashier@{Cashier}!over\-Time@{over\-Time}}
+\index{over\-Time@{over\-Time}!Cashier@{Cashier}}
+\subsubsection[{over\-Time}]{\setlength{\rightskip}{0pt plus 5cm}bool Cashier\-::over\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_a61d85cd680cc3611c5e9fa6d12544236}
+
+
+Retorna se o caixa esta trabalhando hora extra ou nao. 
+
+\hypertarget{classCashier_a6c4e3d00ebeb1e9af88feb6ff2285369}{\index{Cashier@{Cashier}!queue\-Size@{queue\-Size}}
+\index{queue\-Size@{queue\-Size}!Cashier@{Cashier}}
+\subsubsection[{queue\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Cashier\-::queue\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_a6c4e3d00ebeb1e9af88feb6ff2285369}
+
+
+Retorna o numero de clientes na fila no momento. 
+
+\hypertarget{classCashier_ad394576caf7eb468ce5684181b53c83f}{\index{Cashier@{Cashier}!salary@{salary}}
+\index{salary@{salary}!Cashier@{Cashier}}
+\subsubsection[{salary}]{\setlength{\rightskip}{0pt plus 5cm}double Cashier\-::salary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_ad394576caf7eb468ce5684181b53c83f}
+
+
+Retorna o salario do caixa. 
+
+\hypertarget{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}{\index{Cashier@{Cashier}!time\-Of\-Arrival@{time\-Of\-Arrival}}
+\index{time\-Of\-Arrival@{time\-Of\-Arrival}!Cashier@{Cashier}}
+\subsubsection[{time\-Of\-Arrival}]{\setlength{\rightskip}{0pt plus 5cm}int Cashier\-::time\-Of\-Arrival (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_ac0bc4c8f7d5317f296a6ed103a75dfe4}
+
+
+Retorna o horario de chegada do caixa. 
+
+\hypertarget{classCashier_a21fec12d0be5f4ae5f530ff0ee0d6c6e}{\index{Cashier@{Cashier}!total\-Income@{total\-Income}}
+\index{total\-Income@{total\-Income}!Cashier@{Cashier}}
+\subsubsection[{total\-Income}]{\setlength{\rightskip}{0pt plus 5cm}double Cashier\-::total\-Income (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_a21fec12d0be5f4ae5f530ff0ee0d6c6e}
+
+
+Retorna o total da entrada de dinheiro neste caixa. 
+
+\hypertarget{classCashier_af627f5b03558df68531aa86e4eced5a2}{\index{Cashier@{Cashier}!total\-Waiting\-Time@{total\-Waiting\-Time}}
+\index{total\-Waiting\-Time@{total\-Waiting\-Time}!Cashier@{Cashier}}
+\subsubsection[{total\-Waiting\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Cashier\-::total\-Waiting\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCashier_af627f5b03558df68531aa86e4eced5a2}
+
+
+Retorna a soma do tempo de espera de todos os clientes atendidos por este caixa. 
+
 \hypertarget{classCashier_ae84eef690ba7beb9c38e1813bf4a4934}{\index{Cashier@{Cashier}!update@{update}}
 \index{update@{update}!Cashier@{Cashier}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Cashier\-::update (
@@ -83,16 +238,25 @@ Adiciona um cliente a fila de clientes.
 
 Retira clientes que devem sair da fila no horário especificado. 
 
-Checa se o horário atual é o horário de saída do cliente mais antigo, se sim, o retiro da fila. Somando os valores da compras do cliente e tempo de espera na fila nos acumuladores, para posterior análise.
-
-
+Checa se o horário atual é o horário de saída do cliente mais antigo, se sim, o retiro da fila. Somando os valores da compras do cliente e tempo de espera na fila nos acumuladores, para posterior analise. 
 \begin{DoxyParams}{Parameters}
 {\em Tempo} & atual do sistema \\
 \hline
 \end{DoxyParams}
 
 
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classCashier_a34bcc8f6f2057300c0eba451506915d1}{\index{Cashier@{Cashier}!swap@{swap}}
+\index{swap@{swap}!Cashier@{Cashier}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Cashier} \&}]{first, }
+\item[{{\bf Cashier} \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCashier_a34bcc8f6f2057300c0eba451506915d1}
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-cashier/Cashier.\-h\item 
-cashier/Cashier.\-cpp\end{DoxyCompactItemize}
+cashier/\hyperlink{Cashier_8h}{Cashier.\-h}\item 
+cashier/\hyperlink{Cashier_8cpp}{Cashier.\-cpp}\end{DoxyCompactItemize}

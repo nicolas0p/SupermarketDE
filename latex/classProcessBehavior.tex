@@ -1,32 +1,90 @@
 \hypertarget{classProcessBehavior}{\section{Process\-Behavior Class Reference}
 \label{classProcessBehavior}\index{Process\-Behavior@{Process\-Behavior}}
 }
-Inheritance diagram for Process\-Behavior\-:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Process\-Behavior.\-h$>$}
+
+
+
+Inheritance diagram for Process\-Behavior\-:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classProcessBehavior}
+\includegraphics[width=350pt]{classProcessBehavior__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\-Behavior\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classProcessBehavior__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \hyperlink{classProcessBehavior_acd6a6ace48909139c252358d67dc94ea}{$\sim$\-Process\-Behavior} ()
+\item 
 int \hyperlink{classProcessBehavior_a17faac1683e9da239d33026db1fd11f8}{process\-Time} (const \hyperlink{classClient}{Client} \&client)
 \begin{DoxyCompactList}\small\item\em Calcula o tempo de saída do cliente recebido. \end{DoxyCompactList}\item 
-\hypertarget{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{virtual \hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ {\bfseries copy} () const =0}\label{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}
-
+virtual \hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ \hyperlink{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{copy} () const =0
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{virtual int {\bfseries cart\-Size\-Factor} ()=0}\label{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}
-
+virtual int \hyperlink{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{cart\-Size\-Factor} ()=0
 \item 
-\hypertarget{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{virtual int {\bfseries check\-Payment\-Time} ()=0}\label{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}
-
+virtual int \hyperlink{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{check\-Payment\-Time} ()=0
 \end{DoxyCompactItemize}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classProcessBehavior_acd6a6ace48909139c252358d67dc94ea}{\index{Process\-Behavior@{Process\-Behavior}!$\sim$\-Process\-Behavior@{$\sim$\-Process\-Behavior}}
+\index{$\sim$\-Process\-Behavior@{$\sim$\-Process\-Behavior}!ProcessBehavior@{Process\-Behavior}}
+\subsubsection[{$\sim$\-Process\-Behavior}]{\setlength{\rightskip}{0pt plus 5cm}virtual Process\-Behavior\-::$\sim$\-Process\-Behavior (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classProcessBehavior_acd6a6ace48909139c252358d67dc94ea}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{\index{Process\-Behavior@{Process\-Behavior}!cart\-Size\-Factor@{cart\-Size\-Factor}}
+\index{cart\-Size\-Factor@{cart\-Size\-Factor}!ProcessBehavior@{Process\-Behavior}}
+\subsubsection[{cart\-Size\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Process\-Behavior\-::cart\-Size\-Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}
+
+
+Implemented in \hyperlink{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}{Bad\-Processment}, \hyperlink{classGoodProcessment_a99170ba3993e1511cc1fa82aba883bbc}{Good\-Processment}, and \hyperlink{classMediumProcessment_a8baac43e0224353f4c5340c5e7117b62}{Medium\-Processment}.
+
+\hypertarget{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{\index{Process\-Behavior@{Process\-Behavior}!check\-Payment\-Time@{check\-Payment\-Time}}
+\index{check\-Payment\-Time@{check\-Payment\-Time}!ProcessBehavior@{Process\-Behavior}}
+\subsubsection[{check\-Payment\-Time}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Process\-Behavior\-::check\-Payment\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}
+
+
+Implemented in \hyperlink{classBadProcessment_aba28469024834d364c3d599436732204}{Bad\-Processment}, \hyperlink{classGoodProcessment_a126bda449e47094c49f501dcb0cb5d88}{Good\-Processment}, and \hyperlink{classMediumProcessment_ab14abd8ec6b6a7af6aa2879c471dded7}{Medium\-Processment}.
+
+\hypertarget{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{\index{Process\-Behavior@{Process\-Behavior}!copy@{copy}}
+\index{copy@{copy}!ProcessBehavior@{Process\-Behavior}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Process\-Behavior}$\ast$ Process\-Behavior\-::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}
+
+
+Implemented in \hyperlink{classBadProcessment_a682870ce18151f42f864fd22ab61363f}{Bad\-Processment}, \hyperlink{classGoodProcessment_a1c2dfca6ae6c4ab034dfcfc423bf338b}{Good\-Processment}, and \hyperlink{classMediumProcessment_a8207750eb9bf65f830770b3631845934}{Medium\-Processment}.
+
 \hypertarget{classProcessBehavior_a17faac1683e9da239d33026db1fd11f8}{\index{Process\-Behavior@{Process\-Behavior}!process\-Time@{process\-Time}}
 \index{process\-Time@{process\-Time}!ProcessBehavior@{Process\-Behavior}}
 \subsubsection[{process\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Process\-Behavior\-::process\-Time (
@@ -52,5 +110,5 @@ O horário que esse cliente sairá do supermercado
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-cashier/Process\-Behavior.\-h\item 
-cashier/Process\-Behavior.\-cpp\end{DoxyCompactItemize}
+cashier/\hyperlink{ProcessBehavior_8h}{Process\-Behavior.\-h}\item 
+cashier/\hyperlink{ProcessBehavior_8cpp}{Process\-Behavior.\-cpp}\end{DoxyCompactItemize}

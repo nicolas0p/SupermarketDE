@@ -60,6 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -67,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Client.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="Client_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Client.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 09/05/2014</span></div>
@@ -96,33 +97,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef CLIENT_H_</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLIENT_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;PaymentType.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../dataStructures/CircularList.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PaymentType_8h.html">PaymentType.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../dataStructures/Queue.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classSearchBehavior.html">SearchBehavior</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="classCashier.html">Cashier</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classClient.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classClient.html">Client</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classClient.html">Client</a>(<span class="keyword">const</span> <a class="code" href="classSearchBehavior.html">SearchBehavior</a> &amp;searchBehavior, PaymentType paymentType,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> timeOfArrival, <span class="keywordtype">int</span> cartSize, <span class="keywordtype">double</span> cartValue);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classClient.html">Client</a>(<span class="keyword">const</span> <a class="code" href="classClient.html">Client</a>&amp; other);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classClient.html">Client</a>&amp; operator=(<a class="code" href="classClient.html">Client</a> other);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> swap(<a class="code" href="classClient.html">Client</a>&amp; first, <a class="code" href="classClient.html">Client</a>&amp; second);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classClient.html">Client</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> cartSize() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">double</span> cartValue() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    PaymentType paymentType() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> timeOfDeparture() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> timeOfArrival() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> timeOfDeparture(<span class="keywordtype">int</span> timeOfDeparture);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classClient.html#ae51af7aa6b8f591496a8f6a4a87a14bf">Client</a>(<span class="keyword">const</span> <a class="code" href="classSearchBehavior.html">SearchBehavior</a> &amp;searchBehavior, <a class="code" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a> <a class="code" href="classClient.html#a9cceb950fc9c53ea35bcddf6214e4e4f" title="Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro.">paymentType</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classClient.html#af327f525b4cf7838d97c095c8dd00e60" title="Retorna o tempo de chegada do cliente.">timeOfArrival</a>, <span class="keywordtype">int</span> <a class="code" href="classClient.html#a2ef5728c74cc7f9dfce8b5e9e950427c" title="Retorna o numero de itens dentro do carrinho do cliente.">cartSize</a>, <span class="keywordtype">double</span> <a class="code" href="classClient.html#a52b9e8ce7f11c440fb532f6056db5fe2" title="Retorna o valor total dos itens no carrinho.">cartValue</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classClient.html#ae51af7aa6b8f591496a8f6a4a87a14bf">Client</a>(<span class="keyword">const</span> <a class="code" href="classClient.html">Client</a>&amp; other);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classClient.html">Client</a>&amp; <a class="code" href="classClient.html#acc35776f6a75d2fb8d4abfb3cc33f8a3">operator=</a>(<a class="code" href="classClient.html">Client</a> other);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classClient.html#a359e644998b9e1c2adf9d9afe3e04d8c">swap</a>(<a class="code" href="classClient.html">Client</a>&amp; first, <a class="code" href="classClient.html">Client</a>&amp; second);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classClient.html#a840e519ca781888cbd54181572ebe3a7">~Client</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classClient.html#a2ef5728c74cc7f9dfce8b5e9e950427c" title="Retorna o numero de itens dentro do carrinho do cliente.">cartSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classClient.html#a52b9e8ce7f11c440fb532f6056db5fe2" title="Retorna o valor total dos itens no carrinho.">cartValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a> <a class="code" href="classClient.html#a9cceb950fc9c53ea35bcddf6214e4e4f" title="Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro.">paymentType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classClient.html#ae56c063a8bc1c57e9c47ad88b1770994" title="Retorna o tempo de saida do cliente.">timeOfDeparture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classClient.html#af327f525b4cf7838d97c095c8dd00e60" title="Retorna o tempo de chegada do cliente.">timeOfArrival</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#ae56c063a8bc1c57e9c47ad88b1770994" title="Retorna o tempo de saida do cliente.">timeOfDeparture</a>(<span class="keywordtype">int</span> timeOfDeparture);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#a692860756fa31e443b61d5a897f0f46b" title="Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente.">chooseCashier</a>(<a class="code" href="classQueue.html">Queue&lt;Cashier&gt;</a> &amp;cashiers);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classClient.html">Client</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classClient.html#ae51af7aa6b8f591496a8f6a4a87a14bf">Client</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classSearchBehavior.html">SearchBehavior</a> *_searchBehavior;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    PaymentType _paymentType;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="PaymentType_8h.html#afd93b6d28fbdc89dd453db787f87ec6f">PaymentType</a> _paymentType;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> _cartSize;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">double</span> _cartValue;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> _timeOfArrival;</div>

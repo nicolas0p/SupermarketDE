@@ -70,10 +70,8 @@ void Cashier::addClient(Client &client) {
 
 /**
  * @brief Retira clientes que devem sair da fila no horário especificado
- *
  * @details Checa se o horário atual é o horário de saída do cliente mais antigo, se sim, o retiro da fila.
- * Somando os valores da compras do cliente e tempo de espera na fila nos acumuladores, para posterior análise.
- *
+ * Somando os valores da compras do cliente e tempo de espera na fila nos acumuladores, para posterior analise.
  * @param Tempo atual do sistema
  */
 void Cashier::update(int currentTime) {
@@ -89,42 +87,73 @@ void Cashier::update(int currentTime) {
 	}
 }
 
+/**
+ * @brief Retorna o total da entrada de dinheiro neste caixa
+ */
 double Cashier::totalIncome() const {
 	return _totalIncome;
 }
 
+/**
+ * @brief Retorna a media de entrada de dinheiro deste caixa
+ * @details A media e calculada dividindo o total de entrada pelos clientes servidos
+ */
 double Cashier::averageIncome() const {
 	return _totalIncome / _clientsServed;
 }
 
+/**
+ * @brief Retorna a soma do tempo de espera de todos os clientes atendidos por este caixa
+ */
 int Cashier::totalWaitingTime() const {
 	return _totalWaitingTime;
 }
 
+/**
+ * @brief Retorna o total de clientes servidos
+ */
 int Cashier::clientsServed() const {
 	return _clientsServed;
 }
 
+/**
+ * @brief Retorna o numero de clientes na fila no momento
+ */
 int Cashier::queueSize() const {
 	return _queue.size();
 }
 
+/**
+ * @brief Retorna a soma do número de itens de todos os clientes na fila
+ */
 int Cashier::numOfItems() const {
 	return _numOfItems;
 }
 
+/**
+ * @brief Retorna o id do caixa
+ */
 std::string Cashier::id() const {
 	return _id;
 }
 
+/**
+ * @brief Retorna o salario do caixa
+ */
 double Cashier::salary() const {
 	return _salary;
 }
 
+/**
+ * @brief Retorna o horario de chegada do caixa
+ */
 int Cashier::timeOfArrival() const {
 	return _timeOfArrival;
 }
 
+/**
+ * @brief Retorna se o caixa esta trabalhando hora extra ou nao
+ */
 bool Cashier::overTime() const {
 	return _overTime;
 }

@@ -15,6 +15,9 @@
 #include "PaymentType.h"
 #include "SearchBehavior.h"
 
+/**
+ * @brief Cria um cliente aleatorio, dentro dos padroes de frequencia setados nas especificacao
+ */
 Client makeRandomClient(int timeOfArrival) {
 	int cartSize = rand() % 99 + 2; //tamanho do carrinho, de 2 a 100
 	double cartValue = 0;

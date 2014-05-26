@@ -1,30 +1,93 @@
 \hypertarget{classBadProcessment}{\section{Bad\-Processment Class Reference}
 \label{classBadProcessment}\index{Bad\-Processment@{Bad\-Processment}}
 }
-Inheritance diagram for Bad\-Processment\-:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Bad\-Processment.\-h$>$}
+
+
+
+Inheritance diagram for Bad\-Processment\-:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classBadProcessment}
+\includegraphics[width=198pt]{classBadProcessment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bad\-Processment\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classBadProcessment__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBadProcessment_a682870ce18151f42f864fd22ab61363f}{\hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ {\bfseries copy} () const }\label{classBadProcessment_a682870ce18151f42f864fd22ab61363f}
-
-\end{DoxyCompactItemize}
+\hyperlink{classProcessBehavior}{Process\-Behavior} $\ast$ \hyperlink{classBadProcessment_a682870ce18151f42f864fd22ab61363f}{copy} () const 
+\begin{DoxyCompactList}\small\item\em Calcula o tempo de saída do cliente recebido. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}{int {\bfseries cart\-Size\-Factor} ()}\label{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}
-
+int \hyperlink{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}{cart\-Size\-Factor} ()
 \item 
-\hypertarget{classBadProcessment_aba28469024834d364c3d599436732204}{int {\bfseries check\-Payment\-Time} ()}\label{classBadProcessment_aba28469024834d364c3d599436732204}
-
+int \hyperlink{classBadProcessment_aba28469024834d364c3d599436732204}{check\-Payment\-Time} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}{\index{Bad\-Processment@{Bad\-Processment}!cart\-Size\-Factor@{cart\-Size\-Factor}}
+\index{cart\-Size\-Factor@{cart\-Size\-Factor}!BadProcessment@{Bad\-Processment}}
+\subsubsection[{cart\-Size\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}int Bad\-Processment\-::cart\-Size\-Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBadProcessment_a921c2f0f7fa59d0f92a35ddc440eeffb}
+
+
+Implements \hyperlink{classProcessBehavior_a7ccbf0f5499819a6f6c524bfd8595921}{Process\-Behavior}.
+
+\hypertarget{classBadProcessment_aba28469024834d364c3d599436732204}{\index{Bad\-Processment@{Bad\-Processment}!check\-Payment\-Time@{check\-Payment\-Time}}
+\index{check\-Payment\-Time@{check\-Payment\-Time}!BadProcessment@{Bad\-Processment}}
+\subsubsection[{check\-Payment\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Bad\-Processment\-::check\-Payment\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBadProcessment_aba28469024834d364c3d599436732204}
+
+
+Implements \hyperlink{classProcessBehavior_ac3e63322c133f11387759d34dd8fb13c}{Process\-Behavior}.
+
+\hypertarget{classBadProcessment_a682870ce18151f42f864fd22ab61363f}{\index{Bad\-Processment@{Bad\-Processment}!copy@{copy}}
+\index{copy@{copy}!BadProcessment@{Bad\-Processment}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process\-Behavior} $\ast$ Bad\-Processment\-::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBadProcessment_a682870ce18151f42f864fd22ab61363f}
+
+
+Calcula o tempo de saída do cliente recebido. 
+
+Esta é a implementação do caixa com processamento ruim
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cliente} & que terá seu tempo de saída calculado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O horário que esse cliente sairá do supermercado 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classProcessBehavior_afec2ad87efbdc778a93c7e692c97878e}{Process\-Behavior}.
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-cashier/Bad\-Processment.\-h\item 
-cashier/Bad\-Processment.\-cpp\end{DoxyCompactItemize}
+cashier/\hyperlink{BadProcessment_8h}{Bad\-Processment.\-h}\item 
+cashier/\hyperlink{BadProcessment_8cpp}{Bad\-Processment.\-cpp}\end{DoxyCompactItemize}

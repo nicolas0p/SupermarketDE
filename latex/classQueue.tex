@@ -1,99 +1,163 @@
 \hypertarget{classQueue}{\section{Queue$<$ T $>$ Class Template Reference}
 \label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
 }
+
+
+{\ttfamily \#include $<$Queue.\-h$>$}
+
+
+
+Collaboration diagram for Queue$<$ T $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classQueue__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{typedef iterator\-\_\-base$<$ T $>$ {\bfseries iterator}}\label{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}
-
+typedef iterator\-\_\-base$<$ T $>$ \hyperlink{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{iterator}
 \item 
-\hypertarget{classQueue_a10a22f024abb831966e98b859bb2e64d}{typedef iterator\-\_\-base$<$ const T $>$ {\bfseries const\-\_\-iterator}}\label{classQueue_a10a22f024abb831966e98b859bb2e64d}
-
-\item 
-\hypertarget{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{typedef iterator\-\_\-base$<$ T $>$ {\bfseries iterator}}\label{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}
-
-\item 
-\hypertarget{classQueue_a10a22f024abb831966e98b859bb2e64d}{typedef iterator\-\_\-base$<$ const T $>$ {\bfseries const\-\_\-iterator}}\label{classQueue_a10a22f024abb831966e98b859bb2e64d}
-
+typedef iterator\-\_\-base$<$ const T $>$ \hyperlink{classQueue_a10a22f024abb831966e98b859bb2e64d}{const\-\_\-iterator}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classQueue_a3e03781c5f55e9f9ff862360aa33d9a9}{void {\bfseries push\-\_\-back} (const T \&info)}\label{classQueue_a3e03781c5f55e9f9ff862360aa33d9a9}
-
+\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue} ()
 \item 
-\hypertarget{classQueue_a01fbe357228d8f3d10c51def77f04647}{void {\bfseries push\-\_\-front} (const T \&dado)}\label{classQueue_a01fbe357228d8f3d10c51def77f04647}
-
+\hyperlink{classQueue_ac3b3b360bf22dd4ef5874449880ece63}{Queue} (const \hyperlink{classQueue}{Queue}$<$ T $>$ \&other)
 \item 
-\hypertarget{classQueue_a98c1f8cdb878cc1ad5d7f5dc13eec9b8}{void {\bfseries push} (int position, const T \&dado)}\label{classQueue_a98c1f8cdb878cc1ad5d7f5dc13eec9b8}
-
+void \hyperlink{classQueue_ad683a72dcd5d34a7aa0b906aed09d32f}{push\-\_\-back} (const T \&dado)
 \item 
-\hypertarget{classQueue_abeee018138cbb5226e5352a5788e23bd}{T {\bfseries pop} ()}\label{classQueue_abeee018138cbb5226e5352a5788e23bd}
-
+T \hyperlink{classQueue_a21992fd19ab9b53682b03059ecd04c61}{pop\-\_\-front} ()
 \item 
-\hypertarget{classQueue_a4836777845e48b56e4ddf04b3da677c9}{T {\bfseries pop} (int posicao)}\label{classQueue_a4836777845e48b56e4ddf04b3da677c9}
-
+T \hyperlink{classQueue_a91492afa6103be0ffdfcc886fc996b25}{at} (int position) const 
 \item 
-\hypertarget{classQueue_a91492afa6103be0ffdfcc886fc996b25}{T {\bfseries at} (int position) const }\label{classQueue_a91492afa6103be0ffdfcc886fc996b25}
-
+T \hyperlink{classQueue_ae9af6d3cfe017a2f1bf1fd35ce9e99c3}{back} () const 
 \item 
-\hypertarget{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}{bool {\bfseries empty} () const }\label{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}
-
+T \hyperlink{classQueue_a057aac4f78168ea144118dac4222d192}{front} () const 
 \item 
-\hypertarget{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}{int {\bfseries size} () const }\label{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}
-
+bool \hyperlink{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}{empty} () const 
 \item 
-\hypertarget{classQueue_a0f8479ac20e00d122558dce6c3c71473}{iterator {\bfseries begin} ()}\label{classQueue_a0f8479ac20e00d122558dce6c3c71473}
-
+int \hyperlink{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}{size} () const 
 \item 
-\hypertarget{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}{iterator {\bfseries end} ()}\label{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}
-
+\hyperlink{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{iterator} \hyperlink{classQueue_a0f8479ac20e00d122558dce6c3c71473}{begin} ()
 \item 
-\hypertarget{classQueue_a652c1526d0a99cc153bec8df86105cca}{const\-\_\-iterator {\bfseries begin} () const }\label{classQueue_a652c1526d0a99cc153bec8df86105cca}
-
+\hyperlink{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{iterator} \hyperlink{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}{end} ()
 \item 
-\hypertarget{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}{const\-\_\-iterator {\bfseries end} () const }\label{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}
-
+\hyperlink{classQueue_a10a22f024abb831966e98b859bb2e64d}{const\-\_\-iterator} \hyperlink{classQueue_a652c1526d0a99cc153bec8df86105cca}{begin} () const 
 \item 
-\hypertarget{classQueue_ac3b3b360bf22dd4ef5874449880ece63}{{\bfseries Queue} (const \hyperlink{classQueue}{Queue}$<$ T $>$ \&other)}\label{classQueue_ac3b3b360bf22dd4ef5874449880ece63}
-
-\item 
-\hypertarget{classQueue_ad683a72dcd5d34a7aa0b906aed09d32f}{void {\bfseries push\-\_\-back} (const T \&dado)}\label{classQueue_ad683a72dcd5d34a7aa0b906aed09d32f}
-
-\item 
-\hypertarget{classQueue_a21992fd19ab9b53682b03059ecd04c61}{T {\bfseries pop\-\_\-front} ()}\label{classQueue_a21992fd19ab9b53682b03059ecd04c61}
-
-\item 
-\hypertarget{classQueue_a91492afa6103be0ffdfcc886fc996b25}{T {\bfseries at} (int position) const }\label{classQueue_a91492afa6103be0ffdfcc886fc996b25}
-
-\item 
-\hypertarget{classQueue_ae9af6d3cfe017a2f1bf1fd35ce9e99c3}{T {\bfseries back} () const }\label{classQueue_ae9af6d3cfe017a2f1bf1fd35ce9e99c3}
-
-\item 
-\hypertarget{classQueue_a057aac4f78168ea144118dac4222d192}{T {\bfseries front} () const }\label{classQueue_a057aac4f78168ea144118dac4222d192}
-
-\item 
-\hypertarget{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}{bool {\bfseries empty} () const }\label{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}
-
-\item 
-\hypertarget{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}{int {\bfseries size} () const }\label{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}
-
-\item 
-\hypertarget{classQueue_a0f8479ac20e00d122558dce6c3c71473}{iterator {\bfseries begin} ()}\label{classQueue_a0f8479ac20e00d122558dce6c3c71473}
-
-\item 
-\hypertarget{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}{iterator {\bfseries end} ()}\label{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}
-
-\item 
-\hypertarget{classQueue_a652c1526d0a99cc153bec8df86105cca}{const\-\_\-iterator {\bfseries begin} () const }\label{classQueue_a652c1526d0a99cc153bec8df86105cca}
-
-\item 
-\hypertarget{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}{const\-\_\-iterator {\bfseries end} () const }\label{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}
-
+\hyperlink{classQueue_a10a22f024abb831966e98b859bb2e64d}{const\-\_\-iterator} \hyperlink{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}{end} () const 
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\subsection{Member Typedef Documentation}
+\hypertarget{classQueue_a10a22f024abb831966e98b859bb2e64d}{\index{Queue@{Queue}!const\-\_\-iterator@{const\-\_\-iterator}}
+\index{const\-\_\-iterator@{const\-\_\-iterator}!Queue@{Queue}}
+\subsubsection[{const\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef iterator\-\_\-base$<$const T$>$ {\bf Queue}$<$ T $>$\-::{\bf const\-\_\-iterator}}}\label{classQueue_a10a22f024abb831966e98b859bb2e64d}
+\hypertarget{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}{\index{Queue@{Queue}!iterator@{iterator}}
+\index{iterator@{iterator}!Queue@{Queue}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef iterator\-\_\-base$<$T$>$ {\bf Queue}$<$ T $>$\-::{\bf iterator}}}\label{classQueue_abc9e9289124dc3ae5377a7e3d3fbe928}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQueue_af73bb29c868f7b37f369c668f114bd9f}{\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Queue}$<$ T $>$\-::{\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_af73bb29c868f7b37f369c668f114bd9f}
+\hypertarget{classQueue_ac3b3b360bf22dd4ef5874449880ece63}{\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Queue}$<$ T $>$\-::{\bf Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Queue}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_ac3b3b360bf22dd4ef5874449880ece63}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classQueue_a91492afa6103be0ffdfcc886fc996b25}{\index{Queue@{Queue}!at@{at}}
+\index{at@{at}!Queue@{Queue}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Queue}$<$ T $>$\-::at (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a91492afa6103be0ffdfcc886fc996b25}
+\hypertarget{classQueue_ae9af6d3cfe017a2f1bf1fd35ce9e99c3}{\index{Queue@{Queue}!back@{back}}
+\index{back@{back}!Queue@{Queue}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Queue}$<$ T $>$\-::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_ae9af6d3cfe017a2f1bf1fd35ce9e99c3}
+\hypertarget{classQueue_a0f8479ac20e00d122558dce6c3c71473}{\index{Queue@{Queue}!begin@{begin}}
+\index{begin@{begin}!Queue@{Queue}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf iterator} {\bf Queue}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a0f8479ac20e00d122558dce6c3c71473}
+\hypertarget{classQueue_a652c1526d0a99cc153bec8df86105cca}{\index{Queue@{Queue}!begin@{begin}}
+\index{begin@{begin}!Queue@{Queue}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\-\_\-iterator} {\bf Queue}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a652c1526d0a99cc153bec8df86105cca}
+\hypertarget{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}{\index{Queue@{Queue}!empty@{empty}}
+\index{empty@{empty}!Queue@{Queue}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Queue}$<$ T $>$\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a74e1442a08f38177e7dd7f7c8af22d30}
+\hypertarget{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}{\index{Queue@{Queue}!end@{end}}
+\index{end@{end}!Queue@{Queue}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf iterator} {\bf Queue}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_aae0dd33cf275e880bc244aeba0f2fc25}
+\hypertarget{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}{\index{Queue@{Queue}!end@{end}}
+\index{end@{end}!Queue@{Queue}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\-\_\-iterator} {\bf Queue}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_abdd805a2bb752ed37ab2dbc1493a9e24}
+\hypertarget{classQueue_a057aac4f78168ea144118dac4222d192}{\index{Queue@{Queue}!front@{front}}
+\index{front@{front}!Queue@{Queue}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Queue}$<$ T $>$\-::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a057aac4f78168ea144118dac4222d192}
+\hypertarget{classQueue_a21992fd19ab9b53682b03059ecd04c61}{\index{Queue@{Queue}!pop\-\_\-front@{pop\-\_\-front}}
+\index{pop\-\_\-front@{pop\-\_\-front}!Queue@{Queue}}
+\subsubsection[{pop\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Queue}$<$ T $>$\-::pop\-\_\-front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_a21992fd19ab9b53682b03059ecd04c61}
+\hypertarget{classQueue_ad683a72dcd5d34a7aa0b906aed09d32f}{\index{Queue@{Queue}!push\-\_\-back@{push\-\_\-back}}
+\index{push\-\_\-back@{push\-\_\-back}!Queue@{Queue}}
+\subsubsection[{push\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Queue}$<$ T $>$\-::push\-\_\-back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{dado}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_ad683a72dcd5d34a7aa0b906aed09d32f}
+\hypertarget{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}{\index{Queue@{Queue}!size@{size}}
+\index{size@{size}!Queue@{Queue}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Queue}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQueue_ad13b6467a10f5b6b8b78716787a77fd4}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-data\-Structures/Circular\-List.\-h\item 
-data\-Structures/Queue.\-h\end{DoxyCompactItemize}
+data\-Structures/\hyperlink{Queue_8h}{Queue.\-h}\end{DoxyCompactItemize}

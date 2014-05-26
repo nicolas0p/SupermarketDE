@@ -10,9 +10,10 @@
 
 #include <string>
 
-#include "../dataStructures/Queue.h"
 #include "../client/Client.h"
 #include "ProcessBehavior.h"
+
+class Queue<Client>;
 
 class Cashier {
 public:
@@ -34,8 +35,6 @@ public:
 	double salary() const;
 	int timeOfArrival() const;
 	bool overTime() const;
-
-	Cashier();
 
 private:
 	std::string _id;

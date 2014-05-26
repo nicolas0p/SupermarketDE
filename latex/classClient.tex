@@ -1,47 +1,111 @@
 \hypertarget{classClient}{\section{Client Class Reference}
 \label{classClient}\index{Client@{Client}}
 }
+
+
+{\ttfamily \#include $<$Client.\-h$>$}
+
+
+
+Collaboration diagram for Client\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classClient__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}{{\bfseries Client} (const \hyperlink{classSearchBehavior}{Search\-Behavior} \&search\-Behavior, Payment\-Type payment\-Type, int time\-Of\-Arrival, int cart\-Size, double cart\-Value)}\label{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}
-
+\hyperlink{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}{Client} (const \hyperlink{classSearchBehavior}{Search\-Behavior} \&search\-Behavior, \hyperlink{PaymentType_8h_afd93b6d28fbdc89dd453db787f87ec6f}{Payment\-Type} \hyperlink{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}{payment\-Type}, int \hyperlink{classClient_af327f525b4cf7838d97c095c8dd00e60}{time\-Of\-Arrival}, int \hyperlink{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}{cart\-Size}, double \hyperlink{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}{cart\-Value})
 \item 
-\hypertarget{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}{{\bfseries Client} (const \hyperlink{classClient}{Client} \&other)}\label{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}
-
+\hyperlink{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}{Client} (const \hyperlink{classClient}{Client} \&other)
 \item 
-\hypertarget{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}{\hyperlink{classClient}{Client} \& {\bfseries operator=} (\hyperlink{classClient}{Client} other)}\label{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}
-
+\hyperlink{classClient}{Client} \& \hyperlink{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}{operator=} (\hyperlink{classClient}{Client} other)
 \item 
-\hypertarget{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}{int {\bfseries cart\-Size} () const }\label{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}
-
+virtual \hyperlink{classClient_a840e519ca781888cbd54181572ebe3a7}{$\sim$\-Client} ()
 \item 
-\hypertarget{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}{double {\bfseries cart\-Value} () const }\label{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}
-
-\item 
-\hypertarget{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}{Payment\-Type {\bfseries payment\-Type} () const }\label{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}
-
-\item 
-\hypertarget{classClient_ae56c063a8bc1c57e9c47ad88b1770994}{int {\bfseries time\-Of\-Departure} () const }\label{classClient_ae56c063a8bc1c57e9c47ad88b1770994}
-
-\item 
-\hypertarget{classClient_af327f525b4cf7838d97c095c8dd00e60}{int {\bfseries time\-Of\-Arrival} () const }\label{classClient_af327f525b4cf7838d97c095c8dd00e60}
-
-\item 
-\hypertarget{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}{void {\bfseries time\-Of\-Departure} (int time\-Of\-Departure)}\label{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}
-
-\item 
+int \hyperlink{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}{cart\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o numero de itens dentro do carrinho do cliente. \end{DoxyCompactList}\item 
+double \hyperlink{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}{cart\-Value} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o valor total dos itens no carrinho. \end{DoxyCompactList}\item 
+\hyperlink{PaymentType_8h_afd93b6d28fbdc89dd453db787f87ec6f}{Payment\-Type} \hyperlink{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}{payment\-Type} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro. \end{DoxyCompactList}\item 
+int \hyperlink{classClient_ae56c063a8bc1c57e9c47ad88b1770994}{time\-Of\-Departure} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o tempo de saida do cliente. \end{DoxyCompactList}\item 
+int \hyperlink{classClient_af327f525b4cf7838d97c095c8dd00e60}{time\-Of\-Arrival} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o tempo de chegada do cliente. \end{DoxyCompactList}\item 
+void \hyperlink{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}{time\-Of\-Departure} (int time\-Of\-Departure)
+\begin{DoxyCompactList}\small\item\em Iguala o tempo de saida recebido com o atributo tempo de saida. \end{DoxyCompactList}\item 
 void \hyperlink{classClient_a692860756fa31e443b61d5a897f0f46b}{choose\-Cashier} (\hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&cashiers)
-\begin{DoxyCompactList}\small\item\em Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente. \end{DoxyCompactList}\item 
+\hyperlink{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{Client} ()
+\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}{void {\bfseries swap} (\hyperlink{classClient}{Client} \&first, \hyperlink{classClient}{Client} \&second)}\label{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}
-
+void \hyperlink{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}{swap} (\hyperlink{classClient}{Client} \&first, \hyperlink{classClient}{Client} \&second)
 \end{DoxyCompactItemize}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}{\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::\-Client (
+\begin{DoxyParamCaption}
+\item[{const {\bf Search\-Behavior} \&}]{search\-Behavior, }
+\item[{{\bf Payment\-Type}}]{payment\-Type, }
+\item[{int}]{time\-Of\-Arrival, }
+\item[{int}]{cart\-Size, }
+\item[{double}]{cart\-Value}
+\end{DoxyParamCaption}
+)}}\label{classClient_a3b5a8f683ebd0abdf91b8cfe4c8be817}
+\hypertarget{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}{\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::\-Client (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classClient_a4d8e3b9fdfa24b7586bcf24537b89b67}
+\hypertarget{classClient_a840e519ca781888cbd54181572ebe3a7}{\index{Client@{Client}!$\sim$\-Client@{$\sim$\-Client}}
+\index{$\sim$\-Client@{$\sim$\-Client}!Client@{Client}}
+\subsubsection[{$\sim$\-Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::$\sim$\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classClient_a840e519ca781888cbd54181572ebe3a7}
+\hypertarget{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}{\index{Client@{Client}!cart\-Size@{cart\-Size}}
+\index{cart\-Size@{cart\-Size}!Client@{Client}}
+\subsubsection[{cart\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-::cart\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classClient_a2ef5728c74cc7f9dfce8b5e9e950427c}
+
+
+Retorna o numero de itens dentro do carrinho do cliente. 
+
+\hypertarget{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}{\index{Client@{Client}!cart\-Value@{cart\-Value}}
+\index{cart\-Value@{cart\-Value}!Client@{Client}}
+\subsubsection[{cart\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double Client\-::cart\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classClient_a52b9e8ce7f11c440fb532f6056db5fe2}
+
+
+Retorna o valor total dos itens no carrinho. 
+
 \hypertarget{classClient_a692860756fa31e443b61d5a897f0f46b}{\index{Client@{Client}!choose\-Cashier@{choose\-Cashier}}
 \index{choose\-Cashier@{choose\-Cashier}!Client@{Client}}
 \subsubsection[{choose\-Cashier}]{\setlength{\rightskip}{0pt plus 5cm}void Client\-::choose\-Cashier (
@@ -58,9 +122,71 @@ Escolhe a melhor fila do caixa baseado no padrao de escolha do cliente.
 {\em Vetor} & de caixas de onde sera escolhido um \\
 \hline
 \end{DoxyParams}
+\hypertarget{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}{\index{Client@{Client}!operator=@{operator=}}
+\index{operator=@{operator=}!Client@{Client}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Client} \& Client\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Client}}]{other}
+\end{DoxyParamCaption}
+)}}\label{classClient_acc35776f6a75d2fb8d4abfb3cc33f8a3}
+\hypertarget{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}{\index{Client@{Client}!payment\-Type@{payment\-Type}}
+\index{payment\-Type@{payment\-Type}!Client@{Client}}
+\subsubsection[{payment\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Payment\-Type} Client\-::payment\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classClient_a9cceb950fc9c53ea35bcddf6214e4e4f}
+
+
+Retorna o tipo de pagamento do cliente, que pode ser cheque ou dinheiro. 
+
+\hypertarget{classClient_af327f525b4cf7838d97c095c8dd00e60}{\index{Client@{Client}!time\-Of\-Arrival@{time\-Of\-Arrival}}
+\index{time\-Of\-Arrival@{time\-Of\-Arrival}!Client@{Client}}
+\subsubsection[{time\-Of\-Arrival}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-::time\-Of\-Arrival (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classClient_af327f525b4cf7838d97c095c8dd00e60}
+
+
+Retorna o tempo de chegada do cliente. 
+
+\hypertarget{classClient_ae56c063a8bc1c57e9c47ad88b1770994}{\index{Client@{Client}!time\-Of\-Departure@{time\-Of\-Departure}}
+\index{time\-Of\-Departure@{time\-Of\-Departure}!Client@{Client}}
+\subsubsection[{time\-Of\-Departure}]{\setlength{\rightskip}{0pt plus 5cm}int Client\-::time\-Of\-Departure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classClient_ae56c063a8bc1c57e9c47ad88b1770994}
+
+
+Retorna o tempo de saida do cliente. 
+
+\hypertarget{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}{\index{Client@{Client}!time\-Of\-Departure@{time\-Of\-Departure}}
+\index{time\-Of\-Departure@{time\-Of\-Departure}!Client@{Client}}
+\subsubsection[{time\-Of\-Departure}]{\setlength{\rightskip}{0pt plus 5cm}void Client\-::time\-Of\-Departure (
+\begin{DoxyParamCaption}
+\item[{int}]{time\-Of\-Departure}
+\end{DoxyParamCaption}
+)}}\label{classClient_a282e19d2e25da6d8ee8a5c8ad5f0bdd7}
+
+
+Iguala o tempo de saida recebido com o atributo tempo de saida. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}{\index{Client@{Client}!swap@{swap}}
+\index{swap@{swap}!Client@{Client}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Client} \&}]{first, }
+\item[{{\bf Client} \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classClient_a359e644998b9e1c2adf9d9afe3e04d8c}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-client/Client.\-h\item 
-client/Client.\-cpp\end{DoxyCompactItemize}
+client/\hyperlink{Client_8h}{Client.\-h}\item 
+client/\hyperlink{Client_8cpp}{Client.\-cpp}\end{DoxyCompactItemize}

@@ -60,6 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -67,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Cashier.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="Cashier_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Cashier.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 09/05/2014</span></div>
@@ -97,34 +98,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CASHIER_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../dataStructures/Queue.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../client/Client.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ProcessBehavior.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../client/Client.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ProcessBehavior_8h.html">ProcessBehavior.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="classQueue.html">Queue</a>&lt;<a class="code" href="classClient.html">Client</a>&gt;;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classCashier.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCashier.html">Cashier</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classCashier.html">Cashier</a>(std::string <span class="keywordtype">id</span>, <span class="keywordtype">double</span> salary,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">const</span> <a class="code" href="classProcessBehavior.html">ProcessBehavior</a> &amp;processBehavior, <span class="keywordtype">int</span> timeOfArrival, <span class="keywordtype">bool</span> overTime);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCashier.html">Cashier</a>(<span class="keyword">const</span> <a class="code" href="classCashier.html">Cashier</a>&amp; other);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCashier.html">Cashier</a>&amp; operator=(<a class="code" href="classCashier.html">Cashier</a> other);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> swap(<a class="code" href="classCashier.html">Cashier</a>&amp; first, <a class="code" href="classCashier.html">Cashier</a>&amp; second);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ~<a class="code" href="classCashier.html">Cashier</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classCashier.html#a9dd99a4a5f4c5295aaa4584b21e30aec">Cashier</a>(std::string <span class="keywordtype">id</span>, <span class="keywordtype">double</span> <a class="code" href="classCashier.html#ad394576caf7eb468ce5684181b53c83f" title="Retorna o salario do caixa.">salary</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">const</span> <a class="code" href="classProcessBehavior.html">ProcessBehavior</a> &amp;processBehavior, <span class="keywordtype">int</span> <a class="code" href="classCashier.html#ac0bc4c8f7d5317f296a6ed103a75dfe4" title="Retorna o horario de chegada do caixa.">timeOfArrival</a>, <span class="keywordtype">bool</span> <a class="code" href="classCashier.html#a61d85cd680cc3611c5e9fa6d12544236" title="Retorna se o caixa esta trabalhando hora extra ou nao.">overTime</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCashier.html#a9dd99a4a5f4c5295aaa4584b21e30aec">Cashier</a>(<span class="keyword">const</span> <a class="code" href="classCashier.html">Cashier</a>&amp; other);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCashier.html">Cashier</a>&amp; <a class="code" href="classCashier.html#ae50bc394e4ac4ee80817aff2b8ecd846">operator=</a>(<a class="code" href="classCashier.html">Cashier</a> other);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classCashier.html#a34bcc8f6f2057300c0eba451506915d1">swap</a>(<a class="code" href="classCashier.html">Cashier</a>&amp; first, <a class="code" href="classCashier.html">Cashier</a>&amp; second);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classCashier.html#af69977426e869d157423fe6d0d4d08ac">~Cashier</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCashier.html#a8a0e504ffb0178331eac83900182de06" title="Adiciona um cliente a fila de clientes.">addClient</a>(<a class="code" href="classClient.html">Client</a> &amp;client);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCashier.html#ae84eef690ba7beb9c38e1813bf4a4934" title="Retira clientes que devem sair da fila no horário especificado.">update</a>(<span class="keywordtype">int</span> currentTime);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> totalIncome() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> averageIncome() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> totalWaitingTime() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> clientsServed() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> queueSize() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> numOfItems() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string id() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> salary() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> timeOfArrival() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> overTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classCashier.html#a21fec12d0be5f4ae5f530ff0ee0d6c6e" title="Retorna o total da entrada de dinheiro neste caixa.">totalIncome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classCashier.html#aef70a7f98c9049e74830abdc3ef16e48" title="Retorna a media de entrada de dinheiro deste caixa.">averageIncome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCashier.html#af627f5b03558df68531aa86e4eced5a2" title="Retorna a soma do tempo de espera de todos os clientes atendidos por este caixa.">totalWaitingTime</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCashier.html#ae6d59b96dd0a97414a883056487f9934" title="Retorna o total de clientes servidos.">clientsServed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCashier.html#a6c4e3d00ebeb1e9af88feb6ff2285369" title="Retorna o numero de clientes na fila no momento.">queueSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCashier.html#a20019398d52b20997fa109228268b583" title="Retorna a soma do número de itens de todos os clientes na fila.">numOfItems</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string <a class="code" href="classCashier.html#a5c32d6426d9e272649151a965564afb1" title="Retorna o id do caixa.">id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classCashier.html#ad394576caf7eb468ce5684181b53c83f" title="Retorna o salario do caixa.">salary</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCashier.html#ac0bc4c8f7d5317f296a6ed103a75dfe4" title="Retorna o horario de chegada do caixa.">timeOfArrival</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classCashier.html#a61d85cd680cc3611c5e9fa6d12544236" title="Retorna se o caixa esta trabalhando hora extra ou nao.">overTime</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classCashier.html">Cashier</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classCashier.html#a9dd99a4a5f4c5295aaa4584b21e30aec">Cashier</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string _id;</div>

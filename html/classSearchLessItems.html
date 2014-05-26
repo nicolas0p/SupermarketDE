@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,32 +88,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SearchLessItems Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="SearchLessItems_8h_source.html">SearchLessItems.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SearchLessItems:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classSearchLessItems.png" usemap="#SearchLessItems_map" alt=""/>
-  <map id="SearchLessItems_map" name="SearchLessItems_map">
-<area href="classSearchBehavior.html" alt="SearchBehavior" shape="rect" coords="0,0,107,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classSearchLessItems__inherit__graph.png" border="0" usemap="#SearchLessItems_inherit__map" alt="Inheritance graph"/></div>
+<map name="SearchLessItems_inherit__map" id="SearchLessItems_inherit__map">
+<area shape="rect" id="node2" href="classSearchBehavior.html" title="{SearchBehavior\n||+ ~SearchBehavior()\l+ copy()\l+ search()\l}" alt="" coords="5,5,147,112"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for SearchLessItems:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchLessItems__coll__graph.png" border="0" usemap="#SearchLessItems_coll__map" alt="Collaboration graph"/></div>
+<map name="SearchLessItems_coll__map" id="SearchLessItems_coll__map">
+<area shape="rect" id="node2" href="classSearchBehavior.html" title="{SearchBehavior\n||+ ~SearchBehavior()\l+ copy()\l+ search()\l}" alt="" coords="5,5,147,112"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f6334a5f52e56e6ee2ae2b40f4bf93a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f6334a5f52e56e6ee2ae2b40f4bf93a"></a>
-<a class="el" href="classSearchBehavior.html">SearchBehavior</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> () const </td></tr>
+<tr class="memitem:a0f6334a5f52e56e6ee2ae2b40f4bf93a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchBehavior.html">SearchBehavior</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLessItems.html#a0f6334a5f52e56e6ee2ae2b40f4bf93a">copy</a> () const </td></tr>
 <tr class="separator:a0f6334a5f52e56e6ee2ae2b40f4bf93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae7ed499cbee0e61edfc5d6778226c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCashier.html">Cashier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLessItems.html#a1ae7ed499cbee0e61edfc5d6778226c0">search</a> (<a class="el" href="classQueue.html">Queue</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;cashiers) const </td></tr>
 <tr class="memdesc:a1ae7ed499cbee0e61edfc5d6778226c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo polimorfico para a escolha da melhor fila do caixa.  <a href="#a1ae7ed499cbee0e61edfc5d6778226c0">More...</a><br/></td></tr>
 <tr class="separator:a1ae7ed499cbee0e61edfc5d6778226c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classSearchBehavior"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSearchBehavior')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSearchBehavior.html">SearchBehavior</a></td></tr>
+<tr class="memitem:a26300a23565cab5e822f0ce7d32ec7b6 inherit pub_methods_classSearchBehavior"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchBehavior.html#a26300a23565cab5e822f0ce7d32ec7b6">~SearchBehavior</a> ()</td></tr>
+<tr class="separator:a26300a23565cab5e822f0ce7d32ec7b6 inherit pub_methods_classSearchBehavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d1197b72a60a4444c4b3a216697346 inherit pub_methods_classSearchBehavior"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classCashier.html">Cashier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchBehavior.html#a21d1197b72a60a4444c4b3a216697346">search</a> (<a class="el" href="classCircularList.html">CircularList</a>&lt; <a class="el" href="classCashier.html">Cashier</a> &gt; &amp;cashiers) const =0</td></tr>
+<tr class="memdesc:a21d1197b72a60a4444c4b3a216697346 inherit pub_methods_classSearchBehavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo polimorfico para a escolha da melhor fila do caixa.  <a href="#a21d1197b72a60a4444c4b3a216697346">More...</a><br/></td></tr>
+<tr class="separator:a21d1197b72a60a4444c4b3a216697346 inherit pub_methods_classSearchBehavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1ae7ed499cbee0e61edfc5d6778226c0"></a>
+<a class="anchor" id="a0f6334a5f52e56e6ee2ae2b40f4bf93a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchBehavior.html">SearchBehavior</a> * SearchLessItems::copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classSearchBehavior.html#a66f39c53cb1cb9dc029c6fdae55c6234">SearchBehavior</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ae7ed499cbee0e61edfc5d6778226c0"></a>
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classCashier.html">Cashier</a> &amp; SearchLessItems::search </td>
@@ -123,11 +157,6 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Metodo polimorfico para a escolha da melhor fila do caixa. </p>
@@ -139,13 +168,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classSearchBehavior.html#a89f9439f664a750f08a9877710a0fd9f">SearchBehavior</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>client/<a class="el" href="SearchLessItems_8h_source.html">SearchLessItems.h</a></li>
-<li>client/SearchLessItems.cpp</li>
+<li>client/<a class="el" href="SearchLessItems_8cpp.html">SearchLessItems.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

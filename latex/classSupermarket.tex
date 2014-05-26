@@ -1,14 +1,27 @@
 \hypertarget{classSupermarket}{\section{Supermarket Class Reference}
 \label{classSupermarket}\index{Supermarket@{Supermarket}}
 }
+
+
+{\ttfamily \#include $<$Supermarket.\-h$>$}
+
+
+
+Collaboration diagram for Supermarket\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classSupermarket__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSupermarket_a4d3d0ed8426d0f3d0be3424ba9f34ba7}{{\bfseries Supermarket} (const std\-::string \&, const \hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&, int average\-Time\-New\-Clients, int total\-Runtime\-Hours, int max\-Queue\-Size)}\label{classSupermarket_a4d3d0ed8426d0f3d0be3424ba9f34ba7}
-
+\hyperlink{classSupermarket_a4d3d0ed8426d0f3d0be3424ba9f34ba7}{Supermarket} (const std\-::string \&, const \hyperlink{classQueue}{Queue}$<$ \hyperlink{classCashier}{Cashier} $>$ \&, int average\-Time\-New\-Clients, int total\-Runtime\-Hours, int max\-Queue\-Size)
 \item 
-\hypertarget{classSupermarket_af2807840b2e04b8988f359d9e34960ea}{void \hyperlink{classSupermarket_af2807840b2e04b8988f359d9e34960ea}{run} ()}\label{classSupermarket_af2807840b2e04b8988f359d9e34960ea}
-
+virtual \hyperlink{classSupermarket_a6140b300fddafd73ab29cf823baf5951}{$\sim$\-Supermarket} ()
+\item 
+void \hyperlink{classSupermarket_af2807840b2e04b8988f359d9e34960ea}{run} ()
 \begin{DoxyCompactList}\small\item\em loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao \end{DoxyCompactList}\item 
 std\-::string \hyperlink{classSupermarket_a3cb0363d56004ae5f42863d00bb952da}{income\-Of\-Cashiers} () const 
 \begin{DoxyCompactList}\small\item\em Cria texto que representa o total de dinheiro que aquele caixa recebeu de seus clientes. \end{DoxyCompactList}\item 
@@ -20,15 +33,33 @@ double \hyperlink{classSupermarket_a300fa556a29dc813bc29647df30d0cc3}{total\-Inc
 \begin{DoxyCompactList}\small\item\em Calcula o total do dinheiro recebido por todos os caixas. \end{DoxyCompactList}\item 
 double \hyperlink{classSupermarket_aa4ee29cd9ef76a00622dcc9afd409efd}{average\-Waiting\-Time} () const 
 \begin{DoxyCompactList}\small\item\em Calcula o tempo medio de espera por cliente. \end{DoxyCompactList}\item 
-\hypertarget{classSupermarket_aad1cbadfc661d7097aa8e45b43a6de3c}{std\-::string {\bfseries name} () const }\label{classSupermarket_aad1cbadfc661d7097aa8e45b43a6de3c}
+std\-::string \hyperlink{classSupermarket_aad1cbadfc661d7097aa8e45b43a6de3c}{name} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o nome do supermercado. \end{DoxyCompactList}\item 
+int \hyperlink{classSupermarket_af6a5e90ac46538a43854c562d75e763a}{lost\-Clients} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o numero de clientes perdidos. \end{DoxyCompactList}\item 
+double \hyperlink{classSupermarket_a19d1badd6c3efe2dfa719e02a644051f}{lost\-Income} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o faturamento perdido total. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classSupermarket_af6a5e90ac46538a43854c562d75e763a}{int {\bfseries lost\-Clients} () const }\label{classSupermarket_af6a5e90ac46538a43854c562d75e763a}
 
-\item 
-\hypertarget{classSupermarket_a19d1badd6c3efe2dfa719e02a644051f}{double {\bfseries lost\-Income} () const }\label{classSupermarket_a19d1badd6c3efe2dfa719e02a644051f}
-
-\end{DoxyCompactItemize}
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSupermarket_a4d3d0ed8426d0f3d0be3424ba9f34ba7}{\index{Supermarket@{Supermarket}!Supermarket@{Supermarket}}
+\index{Supermarket@{Supermarket}!Supermarket@{Supermarket}}
+\subsubsection[{Supermarket}]{\setlength{\rightskip}{0pt plus 5cm}Supermarket\-::\-Supermarket (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const {\bf Queue}$<$ {\bf Cashier} $>$ \&}]{cashiers, }
+\item[{int}]{average\-Time\-New\-Clients, }
+\item[{int}]{total\-Runtime\-Hours, }
+\item[{int}]{max\-Queue\-Size}
+\end{DoxyParamCaption}
+)}}\label{classSupermarket_a4d3d0ed8426d0f3d0be3424ba9f34ba7}
+\hypertarget{classSupermarket_a6140b300fddafd73ab29cf823baf5951}{\index{Supermarket@{Supermarket}!$\sim$\-Supermarket@{$\sim$\-Supermarket}}
+\index{$\sim$\-Supermarket@{$\sim$\-Supermarket}!Supermarket@{Supermarket}}
+\subsubsection[{$\sim$\-Supermarket}]{\setlength{\rightskip}{0pt plus 5cm}Supermarket\-::$\sim$\-Supermarket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSupermarket_a6140b300fddafd73ab29cf823baf5951}
 
 
 \subsection{Member Function Documentation}
@@ -74,6 +105,39 @@ Cria texto que representa o total de dinheiro que aquele caixa recebeu de seus c
 \begin{DoxyReturn}{Returns}
 String com nome do caixa + o total de dinheiro recebido pelo caixa 
 \end{DoxyReturn}
+\hypertarget{classSupermarket_af6a5e90ac46538a43854c562d75e763a}{\index{Supermarket@{Supermarket}!lost\-Clients@{lost\-Clients}}
+\index{lost\-Clients@{lost\-Clients}!Supermarket@{Supermarket}}
+\subsubsection[{lost\-Clients}]{\setlength{\rightskip}{0pt plus 5cm}int Supermarket\-::lost\-Clients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSupermarket_af6a5e90ac46538a43854c562d75e763a}
+
+
+Retorna o numero de clientes perdidos. 
+
+\hypertarget{classSupermarket_a19d1badd6c3efe2dfa719e02a644051f}{\index{Supermarket@{Supermarket}!lost\-Income@{lost\-Income}}
+\index{lost\-Income@{lost\-Income}!Supermarket@{Supermarket}}
+\subsubsection[{lost\-Income}]{\setlength{\rightskip}{0pt plus 5cm}double Supermarket\-::lost\-Income (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSupermarket_a19d1badd6c3efe2dfa719e02a644051f}
+
+
+Retorna o faturamento perdido total. 
+
+\hypertarget{classSupermarket_aad1cbadfc661d7097aa8e45b43a6de3c}{\index{Supermarket@{Supermarket}!name@{name}}
+\index{name@{name}!Supermarket@{Supermarket}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Supermarket\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSupermarket_aad1cbadfc661d7097aa8e45b43a6de3c}
+
+
+Retorna o nome do supermercado. 
+
 \hypertarget{classSupermarket_a2e35d76f55bf6b5669b5101a2d7ebc93}{\index{Supermarket@{Supermarket}!profit\-Of\-Cashiers@{profit\-Of\-Cashiers}}
 \index{profit\-Of\-Cashiers@{profit\-Of\-Cashiers}!Supermarket@{Supermarket}}
 \subsubsection[{profit\-Of\-Cashiers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Supermarket\-::profit\-Of\-Cashiers (
@@ -90,6 +154,17 @@ lucro do caixa = salario\-Do\-Caixa $\ast$ tempo\-De\-Trabalho / mes
 \begin{DoxyReturn}{Returns}
 String com nome do caixa + lucro do caixa 
 \end{DoxyReturn}
+\hypertarget{classSupermarket_af2807840b2e04b8988f359d9e34960ea}{\index{Supermarket@{Supermarket}!run@{run}}
+\index{run@{run}!Supermarket@{Supermarket}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Supermarket\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSupermarket_af2807840b2e04b8988f359d9e34960ea}
+
+
+loop de funcionamento. Rodara o programa ate o tempo atual ser igual ao tempo total de simulacao 
+
 \hypertarget{classSupermarket_a300fa556a29dc813bc29647df30d0cc3}{\index{Supermarket@{Supermarket}!total\-Income@{total\-Income}}
 \index{total\-Income@{total\-Income}!Supermarket@{Supermarket}}
 \subsubsection[{total\-Income}]{\setlength{\rightskip}{0pt plus 5cm}double Supermarket\-::total\-Income (
@@ -108,5 +183,5 @@ A soma do dinheiro recebido por todos os caixas
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Supermarket.\-h\item 
-Supermarket.\-cpp\end{DoxyCompactItemize}
+\hyperlink{Supermarket_8h}{Supermarket.\-h}\item 
+\hyperlink{Supermarket_8cpp}{Supermarket.\-cpp}\end{DoxyCompactItemize}

@@ -163,14 +163,23 @@ double Supermarket::averageWaitingTime() const {
 	return totalWaitingTime / totalClientsServed;
 }
 
+/**
+ * @brief Retorna o nome do supermercado
+ */
 std::string Supermarket::name() const {
 	return _name;
 }
 
+/**
+ * @brief Retorna o numero de clientes perdidos
+ */
 int Supermarket::lostClients() const {
 	return _lostClients;
 }
 
+/**
+ * @brief Retorna o faturamento perdido total
+ */
 double Supermarket::lostIncome() const {
 	return _lostIncome;
 }
